@@ -1,5 +1,18 @@
-<ion-view view-title="Menu">
-  <ion-content>
-    <h1>Menu</h1>
+<ion-view view-title="Menu" class="menu-view">
+  <ion-content class="padding">
+
+    <div class="title">
+      <div class="label">MENU</div>
+      <div class="city">MUMBAI</div>
+    </div>
+
+    <ui-select ng-model="selectedItem" theme="select2" class="color-positive" style="width: 100%; margin-bottom: 1em; margin-top: 2em;"
+               search-enabled="false" title="CHOOSE AN OUTLET">
+      <ui-select-match placeholder="CHOOSE AN OUTLET">{{$select.selected.name}}</ui-select-match>
+      <ui-select-choices repeat="item in (itemArray | filter: $select.search) track by item.id">
+        <span ng-bind="item.name"></span>
+      </ui-select-choices>
+    </ui-select>
+
   </ion-content>
 </ion-view>

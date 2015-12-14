@@ -58,6 +58,23 @@ angular.module('wafflebay.controllers', [])
 
 })
 
+
+.controller('LoginCtrl', function($scope) {
+  $scope.itemArray = [
+    {id: 1, name: 'MUMBAI'},
+    {id: 2, name: 'SECOND'},
+    {id: 3, name: 'THIRD'},
+    {id: 4, name: 'FOURTH'},
+    {id: 5, name: 'FIFTH'},
+    {id: 6, name: 'SIXTH'},
+    {id: 7, name: 'SEVENTH'},
+    {id: 8, name: 'EIGHTH'},
+    {id: 9, name: 'NINETH'},
+    {id: 10, name: 'TENTH'}
+  ];
+})
+
+
 .controller('HomeCtrl', function($scope) {
   $scope.bestsellers = [
     { image: 'img/pix.jpg', title: 'Mango Delight - 1', desc: 'Out now!' },
@@ -72,5 +89,21 @@ angular.module('wafflebay.controllers', [])
     { image: 'img/pix.jpg', title: '40% OFF ON DIWALI', desc: 'Out now!' },
     { image: 'img/pix.jpg', title: '50% OFF ON DIWALI', desc: 'Out now!' }
   ];
+})
+
+.controller('MenuCtrl', function($scope) {
+  $scope.itemArray = [
+    {id: 1, name: 'MUMBAI'},
+    {id: 2, name: 'SECOND'},
+    {id: 3, name: 'THIRD'},
+    {id: 4, name: 'FOURTH'},
+    {id: 5, name: 'FIFTH'},
+    {id: 6, name: 'SIXTH'},
+    {id: 7, name: 'SEVENTH'},
+    {id: 8, name: 'EIGHTH'},
+    {id: 9, name: 'NINETH'},
+    {id: 10, name: 'TENTH'}
+  ];
+
 })
 ;

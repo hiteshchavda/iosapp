@@ -116,25 +116,62 @@ ion-side-menu {
   }
 }
 
-// Home View
-.home-view {
+
+.logo {
+  height: 30%;
+  background-image: url(../img/logo.png);
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+.login-view {
   .logo {
-    height: 30%;
-    background-image: url(../img/logo.png);
-    background-size: 80%;
+    margin-top: 15%;
+  }
+
+  .medium {
+    height: 20%;
+    margin-top: 10px;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+
+  .fblogin {
+    height: 50px;
+    margin-top: 10px;
+    background: url(../img/loginwfb.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 85%;
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
+
+  .yogurt {
+    height: 40%;
+    background-image: url(../img/yogurtbay.png);
+    background-size: 30%;
     background-repeat: no-repeat;
     background-position: center;
   }
+}
+
+// Home View
+.home-view {
 
   .legend {
     > img {
       width: 12%;
-      margin-left: 20px;
+      margin-left: 10px;
       vertical-align: middle;
     }
 
     font-family: "bauhaus-normal";
-    font-size: 1.5em;
+    font-size: 1.7em;
     color: $energized;
   }
 
@@ -152,12 +189,8 @@ ion-side-menu {
     font-weight: bold;
   }
 
-  .action {
-    padding: 10px;
-
-    .button {
-      font-weight: bold;
-    }
+  .action .button {
+    font-weight: bold;
   }
 
   .social .col {
@@ -175,6 +208,28 @@ ion-side-menu {
     }
     &.instagram {
       background-image: url(../img/instagram.png);
+    }
+  }
+}
+
+
+//Menu view
+.menu-view {
+
+  .title {
+    margin-top: 1em;
+    font-family: "bauhaus-normal";
+    font-weight: bold;
+    font-size: 1.5em;
+
+    .label {
+      float: left;
+      padding-left: 20px;
+    }
+    .city {
+      float: right;
+      //padding-right: 10px;
+      color: $energized;
     }
   }
 }

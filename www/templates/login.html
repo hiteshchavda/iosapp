@@ -1,0 +1,21 @@
+<ion-view class="login-view">
+  <ion-pane>
+
+    <div class="logo"></div>
+
+    <div class="medium">
+      <ui-select ng-model="selectedItem" theme="select2" class="color-positive" style="width: 100%; margin-bottom: 1em;"
+                 search-enabled="false" title="CHOOSE A CITY">
+        <ui-select-match placeholder="CHOOSE A CITY">{{$select.selected.name}}</ui-select-match>
+        <ui-select-choices repeat="item in (itemArray | filter: $select.search) track by item.id">
+          <span ng-bind="item.name"></span>
+        </ui-select-choices>
+      </ui-select>
+
+      <div class="fblogin" ui-sref="app.home"></div>
+    </div>
+
+    <div class="yogurt"></div>
+
+  </ion-pane>
+</ion-view>

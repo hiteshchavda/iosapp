@@ -9877,20 +9877,46 @@ ion-side-menu ion-content {
   .slider-pager .slider-pager-page.active {
     color: #ffcc29; }
 
-.home-view .logo {
+.logo {
   height: 30%;
   background-image: url(../img/logo.png);
-  background-size: 80%;
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.login-view .logo {
+  margin-top: 15%; }
+
+.login-view .medium {
+  height: 20%;
+  margin-top: 10px;
+  margin-left: 15%;
+  margin-right: 15%; }
+
+.login-view .fblogin {
+  height: 50px;
+  margin-top: 10px;
+  background: url(../img/loginwfb.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 85%; }
+  .login-view .fblogin:active {
+    opacity: 0.6; }
+
+.login-view .yogurt {
+  height: 40%;
+  background-image: url(../img/yogurtbay.png);
+  background-size: 30%;
   background-repeat: no-repeat;
   background-position: center; }
 
 .home-view .legend {
   font-family: "bauhaus-normal";
-  font-size: 1.5em;
+  font-size: 1.7em;
   color: #ffcc29; }
   .home-view .legend > img {
     width: 12%;
-    margin-left: 20px;
+    margin-left: 10px;
     vertical-align: middle; }
 
 .home-view .item-divider {
@@ -9905,10 +9931,8 @@ ion-side-menu ion-content {
   color: #000;
   font-weight: bold; }
 
-.home-view .action {
-  padding: 10px; }
-  .home-view .action .button {
-    font-weight: bold; }
+.home-view .action .button {
+  font-weight: bold; }
 
 .home-view .social .col {
   height: 80px;
@@ -9921,3 +9945,15 @@ ion-side-menu ion-content {
     background-image: url(../img/facebook.png); }
   .home-view .social .col.instagram {
     background-image: url(../img/instagram.png); }
+
+.menu-view .title {
+  margin-top: 1em;
+  font-family: "bauhaus-normal";
+  font-weight: bold;
+  font-size: 1.5em; }
+  .menu-view .title .label {
+    float: left;
+    padding-left: 20px; }
+  .menu-view .title .city {
+    float: right;
+    color: #ffcc29; }

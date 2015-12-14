@@ -5,6 +5,7 @@ angular.module('lodash', []).factory('_', function() {
 angular.module('wafflebay', [
   'lodash',
   'ionic',
+  'ui.select',
   'components',
   'wafflebay.controllers'
 ])
@@ -27,6 +28,12 @@ angular.module('wafflebay', [
 
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
+
+    .state('login', {
+      url: '/login',
+      templateUrl: 'templates/login.html',
+      controller: 'LoginCtrl'
+    })
 
     .state('app', {
       url: '/app',
@@ -59,7 +66,8 @@ angular.module('wafflebay', [
       url: '/menu',
       views: {
         'content': {
-          templateUrl: 'templates/menu.html'
+          templateUrl: 'templates/menu.html',
+          controller: 'MenuCtrl'
         }
       }
     })
@@ -138,5 +146,5 @@ angular.module('wafflebay', [
 
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/home');
+  $urlRouterProvider.otherwise('/login');
 });
