@@ -3,21 +3,179 @@ To customize the look and feel of Ionic, you can override the variables
 in ionic's _variables.scss file.
 
 For example, you might change some of the default colors:
-
+*/
 $light:                           #fff !default;
 $stable:                          #f8f8f8 !default;
-$positive:                        #387ef5 !default;
+$positive:                        #3a469c !default;
 $calm:                            #11c1f3 !default;
 $balanced:                        #33cd5f !default;
-$energized:                       #ffc900 !default;
+$energized:                       #ffcc29 !default;
 $assertive:                       #ef473a !default;
-$royal:                           #886aea !default;
-$dark:                            #444 !default;
-*/
-
+$royal:                           #2e2e76 !default;
+$dark:                            #e15d86 !default;
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
+
 
 @import "scss/ionic/ionic";
 @import "scss/bourbon/bourbon";
 @import "scss/components";
+
+
+@include font-face("bauhaus-normal", "../font/bauhaus-normal");
+@include font-face("bauhaus-bold", "../font/bauhaus-bold");
+
+// ui-select styles
+.select2-container {
+
+  &.color-positive {
+    .select2-choice {
+      background: $royal;
+      border: 0;
+      height: 2.2em;
+      font-size: 1.3em;
+      font-weight: 500;
+      box-shadow: none;
+      border-radius: 2em;
+
+      > .select2-chosen {
+        padding: 0.5em 0;
+        color: $energized;
+      }
+
+      .select2-arrow {
+        background: $royal;
+        border: 0;
+        right: 16px;
+
+        b {
+          background: url('../img/select3.png') no-repeat 0 0;
+          background-position-y: 0.5em;
+        }
+      }
+    }
+  }
+
+}
+/* Retina-ize icons */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 2dppx)  {
+  .select2-container.color-positive .select2-choice abbr,
+  .select2-container.color-positive .select2-choice .select2-arrow b {
+    background-image: url('../img/select3x2.png') !important;
+  }
+}
+
+
+ion-content {
+  background: $positive;
+  color: $light;
+}
+ion-pane {
+  background: $positive !important;
+}
+
+ion-side-menu {
+  ion-list .list {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .item {
+    background-color: $royal !important;
+    color: $light;
+    font-weight: bold;
+    font-size: 1.5em;
+    border: 0;
+    border-bottom: 1px #222 solid;
+    margin: 0;
+
+    &.activated {
+      border-color: #222;
+    }
+
+    &:active {
+      color: $energized;
+    }
+  }
+
+  .item-content {
+    background-color: $royal !important;
+  }
+
+  ion-content {
+    background: $royal;
+  }
+}
+
+.slider-pager {
+  text-align: right;
+  right: 10px;
+
+  .slider-pager-page.active {
+    color: $energized;
+  }
+}
+
+// Home View
+.home-view {
+  .logo {
+    height: 30%;
+    background-image: url(../img/logo.png);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .legend {
+    > img {
+      width: 12%;
+      margin-left: 20px;
+      vertical-align: middle;
+    }
+
+    font-family: "bauhaus-normal";
+    font-size: 1.5em;
+    color: $energized;
+  }
+
+  .item-divider {
+    min-height: 0;
+    background-color: $energized;
+    border-color: $energized;
+  }
+
+  .button.claim {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    color: #000;
+    font-weight: bold;
+  }
+
+  .action {
+    padding: 10px;
+
+    .button {
+      font-weight: bold;
+    }
+  }
+
+  .social .col {
+    height: 80px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    &:active {
+      opacity: 0.7;
+    }
+
+    &.facebook {
+      background-image: url(../img/facebook.png);
+    }
+    &.instagram {
+      background-image: url(../img/instagram.png);
+    }
+  }
+}
+

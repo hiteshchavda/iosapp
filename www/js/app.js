@@ -29,48 +29,114 @@ angular.module('wafflebay', [
   $stateProvider
 
     .state('app', {
-    url: '/app',
-    abstract: true,
-    templateUrl: 'templates/menu.html',
-    controller: 'AppCtrl'
-  })
-
-  .state('app.search', {
-    url: '/search',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/search.html'
-      }
-    }
-  })
-
-  .state('app.browse', {
-      url: '/browse',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/browse.html'
-        }
-      }
+      url: '/app',
+      abstract: true,
+      templateUrl: 'templates/app.html',
+      controller: 'AppCtrl'
     })
-    .state('app.playlists', {
-      url: '/playlists',
+
+
+    .state('app.home', {
+      url: '/home',
       views: {
-        'menuContent': {
-          templateUrl: 'templates/playlists.html',
-          controller: 'PlaylistsCtrl'
+        'content': {
+          templateUrl: 'templates/home.html',
+          controller: 'HomeCtrl'
         }
       }
     })
 
-  .state('app.single', {
-    url: '/playlists/:playlistId',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/playlist.html',
-        controller: 'PlaylistCtrl'
+    .state('app.about', {
+      url: '/about',
+      views: {
+        'content': {
+          templateUrl: 'templates/about.html'
+        }
       }
-    }
-  });
+    })
+
+    .state('app.menu', {
+      url: '/menu',
+      views: {
+        'content': {
+          templateUrl: 'templates/menu.html'
+        }
+      }
+    })
+
+    .state('app.reviews', {
+      url: '/reviews',
+      views: {
+        'content': {
+          templateUrl: 'templates/reviews.html'
+        }
+      }
+    })
+
+    .state('app.offers', {
+      url: '/offers',
+      views: {
+        'content': {
+          templateUrl: 'templates/offers.html'
+        }
+      }
+    })
+
+    .state('app.facebook', {
+      url: '/facebook',
+      views: {
+        'content': {
+          templateUrl: 'templates/facebook.html'
+        }
+      }
+    })
+
+    .state('app.locations', {
+      url: '/locations',
+      views: {
+        'content': {
+          templateUrl: 'templates/locations.html'
+        }
+      }
+    })
+
+    .state('app.orderonline', {
+      url: '/orderonline',
+      views: {
+        'content': {
+          templateUrl: 'templates/orderonline.html'
+        }
+      }
+    })
+
+    .state('app.contact', {
+      url: '/contact',
+      views: {
+        'content': {
+          templateUrl: 'templates/contact.html'
+        }
+      }
+    })
+
+    .state('app.myaccount', {
+      url: '/myaccount',
+      views: {
+        'content': {
+          templateUrl: 'templates/myaccount.html'
+        }
+      }
+    })
+
+    .state('app.settings', {
+      url: '/settings',
+      views: {
+        'content': {
+          templateUrl: 'templates/settings.html'
+        }
+      }
+    });
+
+
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/playlists');
+  $urlRouterProvider.otherwise('/app/home');
 });

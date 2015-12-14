@@ -9,48 +9,68 @@ angular.module('wafflebay.controllers', [])
   //$scope.$on('$ionicView.enter', function(e) {
   //});
 
-  // Form data for the login modal
-  $scope.loginData = {};
+  //// Form data for the login modal
+  //$scope.loginData = {};
+  //
+  //// Create the login modal that we will use later
+  //$ionicModal.fromTemplateUrl('templates/login.html', {
+  //  scope: $scope
+  //}).then(function(modal) {
+  //  $scope.modal = modal;
+  //});
+  //
+  //// Triggered in the login modal to close it
+  //$scope.closeLogin = function() {
+  //  $scope.modal.hide();
+  //};
+  //
+  //// Open the login modal
+  //$scope.login = function() {
+  //  $scope.modal.show();
+  //};
+  //
+  //// Perform the login action when the user submits the login form
+  //$scope.doLogin = function() {
+  //  console.log('Doing login', $scope.loginData);
+  //
+  //  // Simulate a login delay. Remove this and replace with your login
+  //  // code if using a login system
+  //  $timeout(function() {
+  //    $scope.closeLogin();
+  //  }, 1000);
+  //};
 
-  // Create the login modal that we will use later
-  $ionicModal.fromTemplateUrl('templates/login.html', {
-    scope: $scope
-  }).then(function(modal) {
-    $scope.modal = modal;
-  });
-
-  // Triggered in the login modal to close it
-  $scope.closeLogin = function() {
-    $scope.modal.hide();
+  $scope.openAbout = function() {
+    var ref = cordova.InAppBrowser.open("http://dabblr.in/app/yogurt/about", "_blank", "location=no");
   };
 
-  // Open the login modal
-  $scope.login = function() {
-    $scope.modal.show();
+  $scope.openLocations = function() {
+    var ref = cordova.InAppBrowser.open("http://dabblr.in/app/yogurt/locations", "_blank", "location=no");
   };
 
-  // Perform the login action when the user submits the login form
-  $scope.doLogin = function() {
-    console.log('Doing login', $scope.loginData);
-
-    // Simulate a login delay. Remove this and replace with your login
-    // code if using a login system
-    $timeout(function() {
-      $scope.closeLogin();
-    }, 1000);
+  $scope.openInstagram = function() {
+    var ref = cordova.InAppBrowser.open("http://dabblr.in/app/yogurt/instagram", "_blank", "location=no");
   };
+
+  $scope.openReviews = function() {
+    var ref = cordova.InAppBrowser.open("http://dabblr.in/app/yogurt/reviews", "_blank", "location=no");
+  };
+
 })
 
-.controller('PlaylistsCtrl', function($scope) {
-  $scope.playlists = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
+.controller('HomeCtrl', function($scope) {
+  $scope.bestsellers = [
+    { image: 'img/pix.jpg', title: 'Mango Delight - 1', desc: 'Out now!' },
+    { image: 'img/pix.jpg', title: 'Mango Delight - 2', desc: 'Out now!' },
+    { image: 'img/pix.jpg', title: 'Mango Delight - 3', desc: 'Out now!' },
+    { image: 'img/pix.jpg', title: 'Mango Delight - 4', desc: 'Out now!' }
+  ];
+
+  $scope.offers = [
+    { image: 'img/pix.jpg', title: '20% OFF ON DIWALI', desc: 'Out now!' },
+    { image: 'img/pix.jpg', title: '30% OFF ON DIWALI', desc: 'Out now!' },
+    { image: 'img/pix.jpg', title: '40% OFF ON DIWALI', desc: 'Out now!' },
+    { image: 'img/pix.jpg', title: '50% OFF ON DIWALI', desc: 'Out now!' }
   ];
 })
-
-.controller('PlaylistCtrl', function($scope, $stateParams) {
-});
+;

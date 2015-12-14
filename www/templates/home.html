@@ -1,0 +1,82 @@
+<ion-view view-title="Home" class="home-view">
+  <ion-content>
+
+    <div class="logo"></div>
+
+    <div class="legend">
+      <img src="img/star.png" />
+      <span>Best sellers</span>
+    </div>
+
+    <!-- Best sellers -->
+    <ion-slide-box does-continue="true">
+      <ion-slide ng-repeat="item in bestsellers track by $index">
+        <div class="list card">
+          <pre-img ratio="_3_2" helper-class="item item-image">
+            <img ng-src="{{item.image}}" spinner-on-load>
+          </pre-img>
+          <div class="item item-divider"></div>
+          <div class="item">
+            <strong>{{item.title}}</strong>
+            <p>{{item.desc}}</p>
+            <button class="button button-energized claim">
+              CLAIM
+            </button>
+          </div>
+        </div>
+      </ion-slide>
+    </ion-slide-box>
+
+
+    <!-- Offers -->
+    <div class="legend">
+      <img src="img/heart.png" />
+      <span>Offers</span>
+    </div>
+
+    <ion-slide-box does-continue="true">
+      <ion-slide ng-repeat="item in offers track by $index">
+        <div class="list card">
+          <pre-img ratio="_3_2" helper-class="item item-image">
+            <img ng-src="{{item.image}}" spinner-on-load>
+          </pre-img>
+          <div class="item item-divider"></div>
+          <div class="item">
+            <strong>{{item.title}}</strong>
+            <p>{{item.desc}}</p>
+            <button class="button button-energized claim">
+              CLAIM
+            </button>
+          </div>
+        </div>
+      </ion-slide>
+    </ion-slide-box>
+
+
+    <!-- Actions -->
+    <div class="action">
+      <button class="button button-block button-dark">
+        VIEW MENU
+      </button>
+      <button class="button button-block button-balanced">
+        REVIEWS
+      </button>
+      <button class="button button-block button-assertive">
+        LOCATIONS
+      </button>
+      <button class="button button-block button-calm">
+        ABOUT
+      </button>
+    </div>
+
+
+    <!-- Facebook, Instagram -->
+    <div class="row social">
+      <div class="col facebook"></div>
+      <div class="col instagram"></div>
+    </div>
+
+    <div style="height: 40px;"></div>
+
+  </ion-content>
+</ion-view>
