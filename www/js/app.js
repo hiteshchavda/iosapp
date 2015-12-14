@@ -108,6 +108,16 @@ angular.module('wafflebay', [
       }
     })
 
+    .state('app.placeorder', {
+      url: '/placeorder',
+      views: {
+        'content': {
+          templateUrl: 'templates/placeorder.html',
+          controller: 'PlaceOrderCtrl'
+        }
+      }
+    })
+
     .state('app.orderonline', {
       url: '/orderonline',
       views: {

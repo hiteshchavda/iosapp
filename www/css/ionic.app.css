@@ -9877,12 +9877,24 @@ ion-side-menu ion-content {
   .slider-pager .slider-pager-page.active {
     color: #ffcc29; }
 
+.button {
+  font-weight: bold; }
+
+.noborder {
+  border: 0; }
+
 .logo {
   height: 30%;
   background-image: url(../img/logo.png);
   background-size: 90%;
   background-repeat: no-repeat;
   background-position: center; }
+
+.wb-title {
+  margin-top: 20px;
+  font-family: "bauhaus-normal";
+  font-weight: bold;
+  font-size: 1.5em; }
 
 .login-view .logo {
   margin-top: 15%; }
@@ -9928,11 +9940,7 @@ ion-side-menu ion-content {
   position: absolute;
   right: 10px;
   bottom: 10px;
-  color: #000;
-  font-weight: bold; }
-
-.home-view .action .button {
-  font-weight: bold; }
+  color: #000; }
 
 .home-view .social .col {
   height: 80px;
@@ -9946,14 +9954,32 @@ ion-side-menu ion-content {
   .home-view .social .col.instagram {
     background-image: url(../img/instagram.png); }
 
-.menu-view .title {
-  margin-top: 1em;
-  font-family: "bauhaus-normal";
-  font-weight: bold;
-  font-size: 1.5em; }
-  .menu-view .title .label {
-    float: left;
-    padding-left: 20px; }
-  .menu-view .title .city {
-    float: right;
-    color: #ffcc29; }
+.menu-view .wb-title .label {
+  float: left;
+  padding-left: 20px; }
+
+.menu-view .wb-title .city {
+  float: right;
+  color: #ffcc29; }
+
+.placeorder-view .wb-title {
+  font-size: 2em; }
+
+.placeorder-view .share .col .icon {
+  width: 35px;
+  line-height: 35px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  text-align: center;
+  display: inline-block;
+  background-color: #ffcc29;
+  color: #3a469c;
+  margin-right: 5px; }
+
+.placeorder-view .share .col span {
+  text-align: center;
+  display: inline-block;
+  width: 30px;
+  background-color: #fff;
+  color: #000;
+  font-size: 0.8em; }

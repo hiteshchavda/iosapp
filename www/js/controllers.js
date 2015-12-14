@@ -106,4 +106,13 @@ angular.module('wafflebay.controllers', [])
   ];
 
 })
+
+.controller('PlaceOrderCtrl', function($scope) {
+  $scope.item = {
+    image: 'img/pix.jpg',
+    title: 'Mango Delight',
+    desc: 'Out now!',
+    text: 'Lorem lpsum dolor sit amet, conectetur adipiscing elit. Praesent non rhoncus urna, et commodo nunc. Nunc dignissim lectus lpsum, vitae fringilla elit ullamcorper a.'
+  };
+})
 ;

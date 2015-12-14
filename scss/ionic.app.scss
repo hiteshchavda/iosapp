@@ -116,6 +116,13 @@ ion-side-menu {
   }
 }
 
+.button {
+  font-weight: bold;
+}
+
+.noborder {
+  border: 0;
+}
 
 .logo {
   height: 30%;
@@ -125,6 +132,12 @@ ion-side-menu {
   background-position: center;
 }
 
+.wb-title {
+  margin-top: 20px;
+  font-family: "bauhaus-normal";
+  font-weight: bold;
+  font-size: 1.5em;
+}
 
 .login-view {
   .logo {
@@ -186,12 +199,8 @@ ion-side-menu {
     right: 10px;
     bottom: 10px;
     color: #000;
-    font-weight: bold;
   }
 
-  .action .button {
-    font-weight: bold;
-  }
 
   .social .col {
     height: 80px;
@@ -216,12 +225,7 @@ ion-side-menu {
 //Menu view
 .menu-view {
 
-  .title {
-    margin-top: 1em;
-    font-family: "bauhaus-normal";
-    font-weight: bold;
-    font-size: 1.5em;
-
+  .wb-title {
     .label {
       float: left;
       padding-left: 20px;
@@ -230,6 +234,37 @@ ion-side-menu {
       float: right;
       //padding-right: 10px;
       color: $energized;
+    }
+  }
+}
+
+
+.placeorder-view {
+  .wb-title {
+    font-size: 2em;
+  }
+
+  .share .col {
+
+    .icon {
+      width: 35px;
+      line-height: 35px;
+      -webkit-border-radius: 50%;
+      border-radius: 50%;
+      text-align: center;
+      display: inline-block;
+      background-color: $energized;
+      color: $positive;
+      margin-right: 5px;
+    }
+
+    span {
+      text-align: center;
+      display: inline-block;
+      width: 30px;
+      background-color: #fff;
+      color: #000;
+      font-size: 0.8em;
     }
   }
 }
