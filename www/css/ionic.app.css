@@ -9826,7 +9826,8 @@ ion-spinner.spinner-on-load {
   border-radius: 2em; }
   .select2-container.color-positive .select2-choice > .select2-chosen {
     padding: 0.5em 0;
-    color: #ffcc29; }
+    color: #ffcc29;
+    font-size: smaller; }
   .select2-container.color-positive .select2-choice .select2-arrow {
     background: #2e2e76;
     border: 0;
@@ -9883,7 +9884,8 @@ ion-side-menu ion-content {
   border-color: #ffcc29; }
 
 .button {
-  font-weight: bold; }
+  font-weight: bold;
+  font-size: small; }
 
 .noborder {
   border: 0; }
@@ -9900,6 +9902,14 @@ ion-side-menu ion-content {
   font-family: "bauhaus-normal";
   font-weight: bold;
   font-size: 2em; }
+
+.wb-input {
+  background-color: #2e2e76;
+  border-radius: 1em;
+  color: #ffcc29 !important;
+  font-weight: bolder;
+  padding: 1em 15px !important;
+  width: 100%; }
 
 .login-view .logo {
   margin-top: 15%; }
@@ -10017,3 +10027,24 @@ ion-side-menu ion-content {
   .orderonline-view i.icon.ion-plus-round:active {
     opacity: 0.7;
     color: #fff; }
+
+.settings-view section {
+  margin-top: 20px;
+  margin-bottom: 10px; }
+
+.settings-view .section-label {
+  font-weight: bold;
+  font-size: larger;
+  margin-left: 15px;
+  margin-bottom: 10px; }
+
+.settings-view .field {
+  margin-left: 5px;
+  margin-right: 5px; }
+  .settings-view .field .label {
+    line-height: 28px;
+    font-weight: 500;
+    font-size: medium;
+    color: #ffcc29; }
+  .settings-view .field .control {
+    text-align: right; }

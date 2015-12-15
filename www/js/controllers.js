@@ -122,4 +122,23 @@ angular.module('wafflebay.controllers', [])
     {image: 'img/pix.jpg', title: 'Mango Delight', small: 160, large: 160}
   ];
 })
+
+.controller('SettingsCtrl', function($scope) {
+  $scope.itemArray = [
+    {id: 1, name: 'MUMBAI'},
+    {id: 2, name: 'SECOND'},
+    {id: 3, name: 'THIRD'},
+    {id: 4, name: 'FOURTH'},
+    {id: 5, name: 'FIFTH'},
+    {id: 6, name: 'SIXTH'},
+    {id: 7, name: 'SEVENTH'},
+    {id: 8, name: 'EIGHTH'},
+    {id: 9, name: 'NINETH'},
+    {id: 10, name: 'TENTH'}
+  ];
+
+  $scope.st1 = true;
+  $scope.st2 = false;
+  $scope.st3 = true;
+})
 ;

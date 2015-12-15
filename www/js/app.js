@@ -6,6 +6,7 @@ angular.module('wafflebay', [
   'lodash',
   'ionic',
   'ui.select',
+  'toggle-switch',
   'components',
   'wafflebay.controllers'
 ])
@@ -150,7 +151,8 @@ angular.module('wafflebay', [
       url: '/settings',
       views: {
         'content': {
-          templateUrl: 'templates/settings.html'
+          templateUrl: 'templates/settings.html',
+          controller: 'SettingsCtrl'
         }
       }
     });

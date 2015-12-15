@@ -41,6 +41,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
       > .select2-chosen {
         padding: 0.5em 0;
         color: $energized;
+        font-size: smaller;
       }
 
       .select2-arrow {
@@ -124,6 +125,7 @@ ion-side-menu {
 
 .button {
   font-weight: bold;
+  font-size: small;
 }
 
 .noborder {
@@ -143,6 +145,15 @@ ion-side-menu {
   font-family: "bauhaus-normal";
   font-weight: bold;
   font-size: 2em;
+}
+
+.wb-input {
+  background-color: $royal;
+  border-radius: 1em;
+  color: $energized !important;
+  font-weight: bolder;
+  padding: 1em 15px !important;
+  width: 100%;
 }
 
 .login-view {
@@ -238,6 +249,7 @@ ion-side-menu {
 }
 
 
+// PlaceOrder view
 .placeorder-view {
   .wb-title {
     color: $energized;
@@ -286,6 +298,7 @@ ion-side-menu {
   }
 }
 
+// OrderOnline view
 .orderonline-view {
 
   .wb-title {
@@ -316,4 +329,35 @@ ion-side-menu {
     }
   }
 
+}
+
+
+// Settings view
+.settings-view {
+  section {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .section-label {
+    font-weight: bold;
+    font-size: larger;
+    margin-left: 15px;
+    margin-bottom: 10px;
+  }
+
+  .field {
+    margin-left: 5px;
+    margin-right: 5px;
+
+    .label {
+      line-height: 28px;
+      font-weight: 500;
+      font-size: medium;
+      color: $energized;
+    }
+    .control {
+      text-align: right;
+    }
+  }
 }
