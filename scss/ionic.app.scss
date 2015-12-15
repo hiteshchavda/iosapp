@@ -116,6 +116,12 @@ ion-side-menu {
   }
 }
 
+.item-divider {
+  min-height: 0;
+  background-color: $energized;
+  border-color: $energized;
+}
+
 .button {
   font-weight: bold;
 }
@@ -136,7 +142,7 @@ ion-side-menu {
   margin-top: 20px;
   font-family: "bauhaus-normal";
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: 2em;
 }
 
 .login-view {
@@ -188,12 +194,6 @@ ion-side-menu {
     color: $energized;
   }
 
-  .item-divider {
-    min-height: 0;
-    background-color: $energized;
-    border-color: $energized;
-  }
-
   .button.claim {
     position: absolute;
     right: 10px;
@@ -232,7 +232,6 @@ ion-side-menu {
     }
     .city {
       float: right;
-      //padding-right: 10px;
       color: $energized;
     }
   }
@@ -241,7 +240,11 @@ ion-side-menu {
 
 .placeorder-view {
   .wb-title {
-    font-size: 2em;
+    color: $energized;
+  }
+
+  .prices {
+    font-size: 14px;
   }
 
   .share .col {
@@ -269,3 +272,48 @@ ion-side-menu {
   }
 }
 
+
+.button.button-icon.cart-button {
+  color: #4772ce;
+  margin-right: 10px;
+
+  .badge {
+    position: absolute;
+    right: -7px;
+    color: $positive;
+    font-size: small;
+    padding: 0px 7px;
+  }
+}
+
+.orderonline-view {
+
+  .wb-title {
+    color: $energized;
+  }
+
+  .row.prices {
+    padding-left: 0;
+    padding-right: 0;
+
+    .col {
+      padding-left: 0;
+      padding-right: 0;
+      line-height: 35px;
+    }
+  }
+
+  i.icon.ion-plus-round {
+    text-align: center;
+    display: inline-block;
+    width: 35px;
+    background-color: $energized;
+    border-radius: 4px;
+
+    &:active {
+      opacity: 0.7;
+      color: #fff;
+    }
+  }
+
+}

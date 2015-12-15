@@ -9877,6 +9877,11 @@ ion-side-menu ion-content {
   .slider-pager .slider-pager-page.active {
     color: #ffcc29; }
 
+.item-divider {
+  min-height: 0;
+  background-color: #ffcc29;
+  border-color: #ffcc29; }
+
 .button {
   font-weight: bold; }
 
@@ -9894,7 +9899,7 @@ ion-side-menu ion-content {
   margin-top: 20px;
   font-family: "bauhaus-normal";
   font-weight: bold;
-  font-size: 1.5em; }
+  font-size: 2em; }
 
 .login-view .logo {
   margin-top: 15%; }
@@ -9931,11 +9936,6 @@ ion-side-menu ion-content {
     margin-left: 10px;
     vertical-align: middle; }
 
-.home-view .item-divider {
-  min-height: 0;
-  background-color: #ffcc29;
-  border-color: #ffcc29; }
-
 .home-view .button.claim {
   position: absolute;
   right: 10px;
@@ -9963,7 +9963,10 @@ ion-side-menu ion-content {
   color: #ffcc29; }
 
 .placeorder-view .wb-title {
-  font-size: 2em; }
+  color: #ffcc29; }
+
+.placeorder-view .prices {
+  font-size: 14px; }
 
 .placeorder-view .share .col .icon {
   width: 35px;
@@ -9983,3 +9986,34 @@ ion-side-menu ion-content {
   background-color: #fff;
   color: #000;
   font-size: 0.8em; }
+
+.button.button-icon.cart-button {
+  color: #4772ce;
+  margin-right: 10px; }
+  .button.button-icon.cart-button .badge {
+    position: absolute;
+    right: -7px;
+    color: #3a469c;
+    font-size: small;
+    padding: 0px 7px; }
+
+.orderonline-view .wb-title {
+  color: #ffcc29; }
+
+.orderonline-view .row.prices {
+  padding-left: 0;
+  padding-right: 0; }
+  .orderonline-view .row.prices .col {
+    padding-left: 0;
+    padding-right: 0;
+    line-height: 35px; }
+
+.orderonline-view i.icon.ion-plus-round {
+  text-align: center;
+  display: inline-block;
+  width: 35px;
+  background-color: #ffcc29;
+  border-radius: 4px; }
+  .orderonline-view i.icon.ion-plus-round:active {
+    opacity: 0.7;
+    color: #fff; }

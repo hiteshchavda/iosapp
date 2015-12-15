@@ -115,4 +115,11 @@ angular.module('wafflebay.controllers', [])
     text: 'Lorem lpsum dolor sit amet, conectetur adipiscing elit. Praesent non rhoncus urna, et commodo nunc. Nunc dignissim lectus lpsum, vitae fringilla elit ullamcorper a.'
   };
 })
+
+.controller('OrderOnlineCtrl', function($scope) {
+  $scope.orders = [
+    {image: 'img/pix.jpg', title: 'Mango Delight', small: 160, large: 160},
+    {image: 'img/pix.jpg', title: 'Mango Delight', small: 160, large: 160}
+  ];
+})
 ;

@@ -12,7 +12,7 @@
     <ion-slide-box does-continue="true">
       <ion-slide ng-repeat="item in bestsellers track by $index">
         <div class="list card">
-          <pre-img ratio="_3_2" helper-class="item item-image">
+          <pre-img ratio="_3_2" helper-class="item item-image" ui-sref="app.placeorder">
             <img ng-src="{{item.image}}" spinner-on-load>
           </pre-img>
           <div class="item item-divider"></div>
@@ -37,7 +37,7 @@
     <ion-slide-box does-continue="true">
       <ion-slide ng-repeat="item in offers track by $index">
         <div class="list card">
-          <pre-img ratio="_3_2" helper-class="item item-image">
+          <pre-img ratio="_3_2" helper-class="item item-image" ui-sref="app.placeorder">
             <img ng-src="{{item.image}}" spinner-on-load>
           </pre-img>
           <div class="item item-divider"></div>

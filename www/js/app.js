@@ -122,7 +122,8 @@ angular.module('wafflebay', [
       url: '/orderonline',
       views: {
         'content': {
-          templateUrl: 'templates/orderonline.html'
+          templateUrl: 'templates/orderonline.html',
+          controller: 'OrderOnlineCtrl'
         }
       }
     })

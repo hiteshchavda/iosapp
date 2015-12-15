@@ -1,7 +1,41 @@
-<ion-view>
+<ion-view class="orderonline-view">
+
+  <ion-nav-buttons side="right">
+    <button class="button button-icon icon ion-ios-cart cart-button">
+      <span class="badge badge-energized">3</span>
+    </button>
+  </ion-nav-buttons>
+
   <ion-content class="padding">
 
     <div class="wb-title">ORDER ONLINE</div>
 
+    <div class="card" ng-repeat="item in orders track by $index">
+      <pre-img ratio="_3_2" helper-class="item item-image">
+        <img ng-src="{{item.image}}" spinner-on-load>
+      </pre-img>
+
+      <div class="item item-divider"></div>
+
+      <div class="item item-body">
+        <strong>{{item.title}}</strong>
+        <div class="row prices">
+          <div class="col" style="text-align: left;">SMALL</div>
+          <div class="col" style="text-align: center;">{{item.small}}</div>
+          <div class="col" style="text-align: right;"><i class="icon ion-plus-round"></i></div>
+        </div>
+        <div class="row prices">
+          <div class="col" style="text-align: left;">LARGE</div>
+          <div class="col" style="text-align: center;">{{item.large}}</div>
+          <div class="col" style="text-align: right;"><i class="icon ion-plus-round"></i></div>
+        </div>
+      </div>
+    </div>
+
+    <button class="button button-block button-calm" ui-sref="app.orderonline">
+      PLACE ORDER
+    </button>
+
+    <div style="height: 40px;"></div>
   </ion-content>
 </ion-view>
