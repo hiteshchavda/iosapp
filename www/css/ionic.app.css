@@ -9887,6 +9887,9 @@ ion-side-menu ion-content {
   font-weight: bold;
   font-size: small; }
 
+ion-header-bar .button.button-icon.ion-navicon, ion-header-bar .button.button-icon.ion-ios-location {
+  color: #ffcc29; }
+
 .noborder {
   border: 0; }
 

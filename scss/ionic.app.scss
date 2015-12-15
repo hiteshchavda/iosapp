@@ -128,6 +128,13 @@ ion-side-menu {
   font-size: small;
 }
 
+ion-header-bar .button.button-icon {
+  &.ion-navicon,
+  &.ion-ios-location {
+    color: $energized;
+  }
+}
+
 .noborder {
   border: 0;
 }
