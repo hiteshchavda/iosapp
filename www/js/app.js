@@ -155,7 +155,18 @@ angular.module('wafflebay', [
           controller: 'SettingsCtrl'
         }
       }
-    });
+    })
+
+    .state('app.mynotifications', {
+      url: '/mynotifications',
+      views: {
+        'content': {
+          templateUrl: 'templates/mynotifications.html',
+          controller: 'MyNotificationsCtrl'
+        }
+      }
+    })
+  ;
 
 
   // if none of the above states are matched, use this as the fallback

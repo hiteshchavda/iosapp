@@ -116,11 +116,24 @@ angular.module('wafflebay.controllers', [])
   };
 })
 
-.controller('OrderOnlineCtrl', function($scope) {
+
+  // OrderOnlineCtrl
+.controller('OrderOnlineCtrl', function($scope, $ionicModal) {
   $scope.orders = [
     {image: 'img/pix.jpg', title: 'Mango Delight', small: 160, large: 160},
     {image: 'img/pix.jpg', title: 'Mango Delight', small: 160, large: 160}
   ];
+
+  $ionicModal.fromTemplateUrl('templates/modal-ordercustomization.html', {
+    scope: $scope,
+    animation: 'slide-in-up'
+  }).then(function(modal) {
+    $scope.modal = modal;
+  });
+
+  $scope.openModal = function() {
+    $scope.modal.show();
+  };
 })
 
 .controller('SettingsCtrl', function($scope) {
@@ -140,5 +153,39 @@ angular.module('wafflebay.controllers', [])
   $scope.st1 = true;
   $scope.st2 = false;
   $scope.st3 = true;
+})
+
+.controller('MyNotificationsCtrl', function($scope) {
+  $scope.itemArray = [
+    {id: 1, name: 'MUMBAI'},
+    {id: 2, name: 'SECOND'},
+    {id: 3, name: 'THIRD'},
+    {id: 4, name: 'FOURTH'},
+    {id: 5, name: 'FIFTH'},
+    {id: 6, name: 'SIXTH'},
+    {id: 7, name: 'SEVENTH'},
+    {id: 8, name: 'EIGHTH'},
+    {id: 9, name: 'NINETH'},
+    {id: 10, name: 'TENTH'}
+  ];
+
+  $scope.notifications = [
+    {
+      date: '21-10-2015',
+      time: '10:20 AM',
+      message: 'New flavours are available at the Bandra outlet. Com join use for some greate flavours. <br> #yogurtbay'
+    },
+    {
+      date: '21-10-2015',
+      time: '10:20 AM',
+      message: 'New flavours are available at the Bandra outlet. Com join use for some greate flavours. <br> #yogurtbay'
+    },
+    {
+      date: '21-10-2015',
+      time: '10:20 AM',
+      message: 'New flavours are available at the Bandra outlet. Com join use for some greate flavours. <br> #yogurtbay'
+    }
+  ];
+
 })
 ;

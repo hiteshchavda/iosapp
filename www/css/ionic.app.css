@@ -10051,3 +10051,33 @@ ion-header-bar .button.button-icon.ion-navicon, ion-header-bar .button.button-ic
     color: #ffcc29; }
   .settings-view .field .control {
     text-align: right; }
+
+.mynotifications-view section {
+  margin-top: 20px;
+  margin-bottom: 10px; }
+
+.mynotifications-view .section-label {
+  font-weight: bold;
+  font-size: larger;
+  margin-left: 15px;
+  margin-bottom: 10px; }
+
+.mynotifications-view .notification {
+  margin-top: 1.5em; }
+  .mynotifications-view .notification .issued-datetime {
+    height: 1.7em;
+    padding-left: 15px;
+    padding-right: 10px;
+    font-size: 1.1em; }
+    .mynotifications-view .notification .issued-datetime .date {
+      float: left; }
+    .mynotifications-view .notification .issued-datetime .time {
+      float: right;
+      color: #ffcc29;
+      font-weight: bolder; }
+  .mynotifications-view .notification .message {
+    background-color: #2e2e76;
+    border-radius: 1em;
+    color: #ffcc29 !important;
+    font-weight: bolder;
+    padding: 1em 15px !important; }

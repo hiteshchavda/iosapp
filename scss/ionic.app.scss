@@ -368,3 +368,47 @@ ion-header-bar .button.button-icon {
     }
   }
 }
+
+
+.mynotifications-view {
+  section {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .section-label {
+    font-weight: bold;
+    font-size: larger;
+    margin-left: 15px;
+    margin-bottom: 10px;
+  }
+
+  .notification {
+    margin-top: 1.5em;
+
+    .issued-datetime {
+      height: 1.7em;
+      padding-left: 15px;
+      padding-right: 10px;
+      font-size: 1.1em;
+
+      .date {
+        float: left;
+      }
+      .time {
+        float: right;
+        color: $energized;
+        font-weight: bolder;
+      }
+    }
+
+    .message {
+      background-color: $royal;
+      border-radius: 1em;
+      color: $energized !important;
+      font-weight: bolder;
+      padding: 1em 15px !important;
+    }
+  }
+
+}
