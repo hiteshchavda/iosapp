@@ -123,17 +123,6 @@ angular.module('wafflebay.controllers', [])
     {image: 'img/pix.jpg', title: 'Mango Delight', small: 160, large: 160},
     {image: 'img/pix.jpg', title: 'Mango Delight', small: 160, large: 160}
   ];
-
-  $ionicModal.fromTemplateUrl('templates/modal-ordercustomization.html', {
-    scope: $scope,
-    animation: 'slide-in-up'
-  }).then(function(modal) {
-    $scope.modal = modal;
-  });
-
-  $scope.openModal = function() {
-    $scope.modal.show();
-  };
 })
 
 .controller('SettingsCtrl', function($scope) {
