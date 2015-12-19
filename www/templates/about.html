@@ -1,5 +1,58 @@
-<ion-view view-title="About">
-  <ion-content>
-    <h1>About</h1>
+<ion-view class="about-view">
+
+  <ion-content scroll="false" padding="false">
+
+    <div class="row wb-tabs">
+      <div class="col" ng-class="{active: isTabActive(0)}" ng-click="selectTab(0)"><div>YOGURTBAY</div></div>
+      <div class="col" ng-class="{active: isTabActive(1)}" ng-click="selectTab(1)"><div>WAFFLEBAY</div></div>
+    </div>
+
+    <ion-slide-box show-pager="false" class="wb-content"
+                   on-slide-changed="slideHasChanged($index)"
+                   delegate-handle="aboutSlideBox">
+      <ion-slide>
+        <ion-scroll style="height: 100%;" class="padding">
+          <div class="yogurtbay-logo"></div>
+          <p>
+            Young fresh and quirky, the smiley face that forms the core of our logo perfectly encapsulates how we want our customers to leave the store.
+            The brand name is a combination of our focal product 'frozen yogurt' and to pay homage to the city in which the idea was borne 'the bay' - Mumbai.
+          </p>
+          <p>
+            Frozen yogurt has given us a platform to shake up the whole Indian dessert market as we know it. Ice cream through both local and
+            international powerhouses has been around since time immemorial but for frozen yogurt 3 years ago was uncharted territory that gave us the opportunity
+            to stretch our imaginations to the furthest. Since our inception in 2011, Yogurtbay, from its 90sq ft space on Carter road in Bandra, Mumbai, has gone on
+            to be front runners in the frozen yogurt business across the country. Yogurtbay is the benchmark when it comes to innovation in the frozen dessert market.
+          </p>
+          <p>
+            Yogurtbay foods and beverages is an across the board yogurt players as it specializes in both a store format as well as an outdoor experience.
+            We have catered global music festivals, conferences and weddings across the country. Being voted the best dessert chain in the city(mumbaiboss 2012 and 2013)
+            and getting a gold star accreditation(zomato india 2012, 2013 and 2014). In 2014 yogurtbay joined hands with the Pittie group, spearheaded by the tenacious Shri Aditya.
+            Pittie has given the brand the right backing and financial thrust to open new stores in under 1 year across Mumbai, Pune, Hyderabad, Bhopal and Kochin.
+            Yogurtbay is further looking to spread its footprint pan India as well as globally in the year 2015.
+          </p>
+        </ion-scroll>
+      </ion-slide>
+
+      <ion-slide>
+        <ion-scroll style="height: 100%;" class="padding">
+          <p>
+            Yogurtbay changed the Indian dessert market with its healthy delicious line of gourmet eggless frozen yogurt
+            and smoothies at a time when everyone gorging on sugar loaded unhealhy treats. In just about 3 years people as a lifestyle choice
+            but also made yogurtbay India's most loved and fastest growing frozen yogurt brand.
+            The Pittie group's strong backing and financial thrust has propelled Yogurtbay to not just expand to newer cities
+            but also introduce Wafflebay to the Indian dessert lovers.
+            Wafflebay to the Indian dessert lovers. Wafflebay by Yogurtbay, a new lie of waffle sticks, will change the way you savour your desserts!
+          </p>
+          <p>
+            Mc Robin Chatterjee founder of Yogurtbay said "Healthy eating is not a fad anymore, it's a lifestyle choice. People are choosing to eat wisely rather than cutting down
+            on their cravings. Yogurtbay incredible success is testimony to this changing reality. Wafflebay is an organic extension of Yogurtbay into hot desserts. Wafflebay is India's
+            first indigenous waffle brand that brings to the country the top worldwide trend. Waffles are a global hit and we bring the best ones to our patrons! Crispy, handy and delicious
+            with complete flexibility in customization. Wafflebay will surely change how Indians indulge their sweet tooth!"
+          </p>
+        </ion-scroll>
+      </ion-slide>
+    </ion-slide-box>
+
   </ion-content>
+
 </ion-view>

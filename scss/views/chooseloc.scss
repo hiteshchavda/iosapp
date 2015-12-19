@@ -1,0 +1,45 @@
+.chooseloc-view {
+
+  ion-pane {
+    @include display(flex);
+    @include flex-direction(column);
+  }
+
+  .medium {
+    @include flex(1);
+    overflow: scroll;
+  }
+
+  .wb-title {
+    color: $energized;
+    font-size: 1.5em;
+    margin: 10px 0 1em 5px;
+  }
+
+  .location.card {
+    font-family: "bauhaus-normal";
+    margin-top: 0;
+
+    &.active .item {
+      background-color: lighten($balanced, 40);
+    }
+
+    .title {
+      color: $energized;
+      font-size: larger;
+    }
+
+    .address {
+      color: #000;
+      font-size: 1em;
+    }
+
+    .check {
+      position: absolute;
+      right: 1em;
+      top: 1em;
+    }
+  }
+
+}
+

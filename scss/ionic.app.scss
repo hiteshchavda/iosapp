@@ -6,12 +6,12 @@ For example, you might change some of the default colors:
 */
 $light:                           #fff !default;
 $stable:                          #f8f8f8 !default;
-$positive:                        #3a469c !default;
+$positive:                        #2e2e76 !default;
 $calm:                            #11c1f3 !default;
 $balanced:                        #33cd5f !default;
 $energized:                       #ffcc29 !default;
 $assertive:                       #ef473a !default;
-$royal:                           #2e2e76 !default;
+$royal:                           #224590 !default;
 $dark:                            #e15d86 !default;
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
@@ -19,7 +19,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 @import "scss/ionic/ionic";
 @import "scss/bourbon/bourbon";
-@import "scss/components";
+@import "scss/common.directives";
 
 
 @include font-face("bauhaus-normal", "../font/bauhaus-normal");
@@ -30,11 +30,10 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 
   &.color-positive {
     .select2-choice {
-      background: $royal;
+      background: $positive;
       border: 0;
       height: 2.2em;
-      font-size: 1.3em;
-      font-weight: 500;
+      font-size: larger;
       box-shadow: none;
       border-radius: 2em;
 
@@ -45,7 +44,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
       }
 
       .select2-arrow {
-        background: $royal;
+        background: $positive;
         border: 0;
         right: 16px;
 
@@ -69,11 +68,11 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 
 ion-content {
-  background: $positive;
+  background: $royal;
   color: $light;
 }
 ion-pane {
-  background: $positive !important;
+  background: $royal !important;
 }
 
 ion-side-menu {
@@ -82,10 +81,7 @@ ion-side-menu {
     margin-right: 10px;
   }
   .item {
-    background-color: $royal !important;
     color: $light;
-    font-weight: bold;
-    font-size: 1.5em;
     border: 0;
     border-bottom: 1px #222 solid;
     margin: 0;
@@ -99,13 +95,12 @@ ion-side-menu {
     }
   }
 
+  ion-content,
+  ion-item,
   .item-content {
-    background-color: $royal !important;
+    background-color: $positive !important;
   }
 
-  ion-content {
-    background: $royal;
-  }
 }
 
 .slider-pager {
@@ -123,292 +118,57 @@ ion-side-menu {
   border-color: $energized;
 }
 
-.button {
-  font-weight: bold;
-  font-size: small;
+
+// buttons in navigation bar
+ion-header-bar .button.button-icon {
+
+  &.cart-button {
+    color: #4772ce;
+
+    .badge {
+      position: absolute;
+      right: 0;
+      color: $positive;
+      font-size: small;
+      padding: 0px 7px;
+    }
+  }
+
 }
 
-ion-header-bar .button.button-icon {
-  &.ion-navicon,
-  &.ion-ios-location {
-    color: $energized;
-  }
+.row, .col {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.tab-item {
+  max-width: inherit;
+}
+
+
+.wb-input {
+  background-color: $positive;
+  border-radius: 1em;
+  color: $energized !important;
+  font-size: larger !important;
+  padding: 10px 15px !important;
+  width: 100%;
+  height: auto !important;
 }
 
 .noborder {
   border: 0;
 }
 
-.logo {
-  height: 30%;
-  background-image: url(../img/logo.png);
-  background-size: 90%;
-  background-repeat: no-repeat;
-  background-position: center;
-}
 
-.wb-title {
-  margin-top: 20px;
-  font-family: "bauhaus-normal";
-  font-weight: bold;
-  font-size: 2em;
-}
+@import "views/partials";
+@import "views/login";
+@import "views/home";
+@import "views/menu";
+@import "views/orderonline";
+@import "views/settings";
+@import "views/placeorder";
+@import "views/chooseloc";
+@import "views/about";
+@import "views/myaccount";
 
-.wb-input {
-  background-color: $royal;
-  border-radius: 1em;
-  color: $energized !important;
-  font-weight: bolder;
-  padding: 1em 15px !important;
-  width: 100%;
-}
-
-.login-view {
-  .logo {
-    margin-top: 15%;
-  }
-
-  .medium {
-    height: 20%;
-    margin-top: 10px;
-    margin-left: 15%;
-    margin-right: 15%;
-  }
-
-  .fblogin {
-    height: 50px;
-    margin-top: 10px;
-    background: url(../img/loginwfb.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 85%;
-
-    &:active {
-      opacity: 0.6;
-    }
-  }
-
-  .yogurt {
-    height: 40%;
-    background-image: url(../img/yogurtbay.png);
-    background-size: 30%;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-}
-
-// Home View
-.home-view {
-
-  .legend {
-    > img {
-      width: 12%;
-      margin-left: 10px;
-      vertical-align: middle;
-    }
-
-    font-family: "bauhaus-normal";
-    font-size: 1.7em;
-    color: $energized;
-  }
-
-  .button.claim {
-    position: absolute;
-    right: 10px;
-    bottom: 10px;
-    color: #000;
-  }
-
-
-  .social .col {
-    height: 80px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-
-    &:active {
-      opacity: 0.7;
-    }
-
-    &.facebook {
-      background-image: url(../img/facebook.png);
-    }
-    &.instagram {
-      background-image: url(../img/instagram.png);
-    }
-  }
-}
-
-
-//Menu view
-.menu-view {
-
-  .wb-title {
-    .label {
-      float: left;
-      padding-left: 20px;
-    }
-    .city {
-      float: right;
-      color: $energized;
-    }
-  }
-}
-
-
-// PlaceOrder view
-.placeorder-view {
-  .wb-title {
-    color: $energized;
-  }
-
-  .prices {
-    font-size: 14px;
-  }
-
-  .share .col {
-
-    .icon {
-      width: 35px;
-      line-height: 35px;
-      -webkit-border-radius: 50%;
-      border-radius: 50%;
-      text-align: center;
-      display: inline-block;
-      background-color: $energized;
-      color: $positive;
-      margin-right: 5px;
-    }
-
-    span {
-      text-align: center;
-      display: inline-block;
-      width: 30px;
-      background-color: #fff;
-      color: #000;
-      font-size: 0.8em;
-    }
-  }
-}
-
-
-.button.button-icon.cart-button {
-  color: #4772ce;
-  margin-right: 10px;
-
-  .badge {
-    position: absolute;
-    right: -7px;
-    color: $positive;
-    font-size: small;
-    padding: 0px 7px;
-  }
-}
-
-// OrderOnline view
-.orderonline-view {
-
-  .wb-title {
-    color: $energized;
-  }
-
-  .row.prices {
-    padding-left: 0;
-    padding-right: 0;
-
-    .col {
-      padding-left: 0;
-      padding-right: 0;
-      line-height: 35px;
-    }
-  }
-
-  i.icon.ion-plus-round {
-    text-align: center;
-    display: inline-block;
-    width: 35px;
-    background-color: $energized;
-    border-radius: 4px;
-
-    &:active {
-      opacity: 0.7;
-      color: #fff;
-    }
-  }
-
-}
-
-
-// Settings view
-.settings-view {
-  section {
-    margin-top: 20px;
-    margin-bottom: 10px;
-  }
-
-  .section-label {
-    font-weight: bold;
-    font-size: larger;
-    margin-left: 15px;
-    margin-bottom: 10px;
-  }
-
-  .field {
-    margin-left: 5px;
-    margin-right: 5px;
-
-    .label {
-      line-height: 28px;
-      font-weight: 500;
-      font-size: medium;
-      color: $energized;
-    }
-    .control {
-      text-align: right;
-    }
-  }
-}
-
-
-.mynotifications-view {
-  section {
-    margin-top: 20px;
-    margin-bottom: 10px;
-  }
-
-  .section-label {
-    font-weight: bold;
-    font-size: larger;
-    margin-left: 15px;
-    margin-bottom: 10px;
-  }
-
-  .notification {
-    margin-top: 1.5em;
-
-    .issued-datetime {
-      height: 1.7em;
-      padding-left: 15px;
-      padding-right: 10px;
-      font-size: 1.1em;
-
-      .date {
-        float: left;
-      }
-      .time {
-        float: right;
-        color: $energized;
-        font-weight: bolder;
-      }
-    }
-
-    .message {
-      background-color: $royal;
-      border-radius: 1em;
-      color: $energized !important;
-      font-weight: bolder;
-      padding: 1em 15px !important;
-    }
-  }
-
-}

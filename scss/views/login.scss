@@ -1,0 +1,39 @@
+.login-view {
+
+  .top {
+    height: 40%;
+
+    background-image: url(../img/logo.png);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .medium {
+    height: 10%;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+
+  .fblogin {
+    height: 50px;
+    background: url(../img/loginwfb.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 85%;
+
+    &:active {
+      opacity: 0.7;
+    }
+  }
+
+  .bottom {
+    height: 50%;
+    background-image: url(../img/yogurtbay.png);
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+}
+

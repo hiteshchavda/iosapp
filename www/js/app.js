@@ -7,11 +7,12 @@ angular.module('wafflebay', [
   'ionic',
   'ui.select',
   'toggle-switch',
-  'components',
+  'tabSlideBox',
+  'common.directives',
   'wafflebay.controllers'
 ])
 
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform, $rootScope) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -25,6 +26,41 @@ angular.module('wafflebay', [
       StatusBar.styleDefault();
     }
   });
+
+
+  // TODO: remove the test codes below in production version.
+  $rootScope.cities = [
+    {id: 1, name: 'MUMBAI'},
+    {id: 2, name: 'SECOND'},
+    {id: 3, name: 'THIRD'},
+    {id: 4, name: 'FOURTH'},
+    {id: 5, name: 'FIFTH'},
+    {id: 6, name: 'SIXTH'},
+    {id: 7, name: 'SEVENTH'},
+    {id: 8, name: 'EIGHTH'},
+    {id: 9, name: 'NINETH'},
+    {id: 10, name: 'TENTH'}
+  ];
+
+
+  $rootScope.atabs = [
+    {"text" : "ORDERS"},
+    {"text" : "NOTIFICATIONS"}
+  ];
+
+  $rootScope.btabs = [
+    {"text" : "MUMBAI"},
+    {"text" : "DELHI"},
+    {"text" : "HYDERA"},
+    {"text" : "Napeon"}
+  ];
+
+  $rootScope.options = {
+    showpager: false,
+    loop: true
+  };
+  //$rootScope.slider
+
 })
 
 .config(function($stateProvider, $urlRouterProvider) {
@@ -34,6 +70,12 @@ angular.module('wafflebay', [
       url: '/login',
       templateUrl: 'templates/login.html',
       controller: 'LoginCtrl'
+    })
+
+    .state('chooseloc', {
+      url: '/chooseloc',
+      templateUrl: 'templates/chooseloc.html',
+      controller: 'ChooseLocCtrl'
     })
 
     .state('app', {
@@ -54,48 +96,22 @@ angular.module('wafflebay', [
       }
     })
 
+    .state('app.orderonline', {
+      url: '/orderonline',
+      views: {
+        'content': {
+          templateUrl: 'templates/orderonline.html',
+          controller: 'OrderOnlineCtrl'
+        }
+      }
+    })
+
     .state('app.about', {
       url: '/about',
       views: {
         'content': {
-          templateUrl: 'templates/about.html'
-        }
-      }
-    })
-
-    .state('app.menu', {
-      url: '/menu',
-      views: {
-        'content': {
-          templateUrl: 'templates/menu.html',
-          controller: 'MenuCtrl'
-        }
-      }
-    })
-
-    .state('app.reviews', {
-      url: '/reviews',
-      views: {
-        'content': {
-          templateUrl: 'templates/reviews.html'
-        }
-      }
-    })
-
-    .state('app.offers', {
-      url: '/offers',
-      views: {
-        'content': {
-          templateUrl: 'templates/offers.html'
-        }
-      }
-    })
-
-    .state('app.facebook', {
-      url: '/facebook',
-      views: {
-        'content': {
-          templateUrl: 'templates/facebook.html'
+          templateUrl: 'templates/about.html',
+          controller: 'AboutCtrl'
         }
       }
     })
@@ -109,40 +125,12 @@ angular.module('wafflebay', [
       }
     })
 
-    .state('app.placeorder', {
-      url: '/placeorder',
-      views: {
-        'content': {
-          templateUrl: 'templates/placeorder.html',
-          controller: 'PlaceOrderCtrl'
-        }
-      }
-    })
-
-    .state('app.orderonline', {
-      url: '/orderonline',
-      views: {
-        'content': {
-          templateUrl: 'templates/orderonline.html',
-          controller: 'OrderOnlineCtrl'
-        }
-      }
-    })
-
-    .state('app.contact', {
-      url: '/contact',
-      views: {
-        'content': {
-          templateUrl: 'templates/contact.html'
-        }
-      }
-    })
-
     .state('app.myaccount', {
       url: '/myaccount',
       views: {
         'content': {
-          templateUrl: 'templates/myaccount.html'
+          templateUrl: 'templates/myaccount.html',
+          controller: 'MyAccountCtrl'
         }
       }
     })
@@ -157,15 +145,21 @@ angular.module('wafflebay', [
       }
     })
 
-    .state('app.mynotifications', {
-      url: '/mynotifications',
+
+
+
+
+
+    .state('app.placeorder', {
+      url: '/placeorder',
       views: {
         'content': {
-          templateUrl: 'templates/mynotifications.html',
-          controller: 'MyNotificationsCtrl'
+          templateUrl: 'templates/placeorder.html',
+          controller: 'PlaceOrderCtrl'
         }
       }
     })
+
   ;
 
 

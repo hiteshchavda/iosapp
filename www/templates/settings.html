@@ -1,67 +1,37 @@
 <ion-view class="settings-view">
   <ion-content class="padding">
 
-    <div class="wb-title">SETTINGS</div>
-
     <section>
-      <div class="section-label">CITY</div>
-      <ui-select ng-model="selectedItem" theme="select2" class="color-positive" style="width: 100%; margin-bottom: 1em;"
+      <div class="label">CITY</div>
+      <ui-select ng-model="selectedItem" theme="select2" class="color-positive" style="width: 100%;"
                  search-enabled="false" title="CHOOSE A CITY">
         <ui-select-match placeholder="CHOOSE A CITY">{{$select.selected.name}}</ui-select-match>
-        <ui-select-choices repeat="item in (itemArray | filter: $select.search) track by item.id">
+        <ui-select-choices repeat="item in (cities | filter: $select.search) track by item.id">
           <span ng-bind="item.name"></span>
         </ui-select-choices>
       </ui-select>
     </section>
 
     <section>
-      <div class="section-label">NOTIFICATIONS</div>
-      <div class="row field">
-        <div class="col label">BANDRA</div>
-        <div class="col control">
-          <toggle-switch ng-model="st1" on-label="ON" off-label="OFF"></toggle-switch>
-        </div>
-      </div>
-      <div class="row field">
-        <div class="col label">SANTA CRUZ</div>
-        <div class="col control">
-          <toggle-switch ng-model="st2" on-label="ON" off-label="OFF"></toggle-switch>
-        </div>
-      </div>
-      <div class="row field">
-        <div class="col label">WORLI</div>
-        <div class="col control">
-          <toggle-switch ng-model="st3" on-label="ON" off-label="OFF"></toggle-switch>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="section-label">E-MAIL</div>
+      <div class="label">E-MAIL</div>
       <input type="email" class="wb-input" value="shirish@redmattertech.com"/>
     </section>
 
     <section>
-      <div class="section-label">PHONE NUMBER</div>
+      <div class="label">PHONE NUMBER</div>
       <input type="tel" class="wb-input" value="+91 7799882908"/>
     </section>
 
     <section>
-      <div class="section-label">ADDRESS</div>
+      <div class="label">ADDRESS</div>
       <textarea class="wb-input" rows="4">Flat no 221,</textarea>
     </section>
 
+    <button class="button button-block button-balanced">
+      CHANGE LOCATION
+    </button>
 
-    <section>
-      <button class="button button-block button-balanced" ui-sref="app.mynotifications">
-        MY NOTIFICATIONS
-      </button>
-      <button class="button button-block button-dark">
-        LOGOUT
-      </button>
-    </section>
-
-    <div style="height: 40px;"></div>
+    <div style="height: 20px;"></div>
 
   </ion-content>
 </ion-view>

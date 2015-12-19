@@ -8,12 +8,19 @@
         <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
         </button>
       </ion-nav-buttons>
+
+      <ion-nav-buttons side="right">
+        <button class="button button-icon icon ion-ios-cart cart-button">
+          <span class="badge badge-energized">3</span>
+        </button>
+      </ion-nav-buttons>
+
     </ion-nav-bar>
     <ion-nav-view name="content"></ion-nav-view>
   </ion-side-menu-content>
 
   <ion-side-menu side="left" width="250">
-    <ion-header-bar class="bar-royal">
+    <ion-header-bar class="bar-positive">
       <h1 class="title">&nbsp;</h1>
     </ion-header-bar>
     <ion-content>
@@ -21,29 +28,23 @@
         <ion-item menu-close ui-sref="app.home">
           HOME
         </ion-item>
-        <ion-item menu-close ng-click="openAbout();">
-          ABOUT
+        <ion-item menu-close ui-sref="app.orderonline">
+          ORDER ONLINE
         </ion-item>
-        <ion-item menu-close ui-sref="app.menu">
-          MENU
+        <ion-item menu-close ui-sref="app.about">
+          ABOUT
         </ion-item>
         <ion-item menu-close ng-click="openReviews();">
           REVIEWS
         </ion-item>
-        <ion-item menu-close ui-sref="app.offers">
-          OFFERS
-        </ion-item>
-        <ion-item menu-close ui-sref="app.facebook">
+        <ion-item menu-close ng-click="openFacebook();">
           FACEBOOK
         </ion-item>
-        <ion-item menu-close ng-click="openLocations();">
+        <ion-item menu-close ng-click="openInstagram();">
+          INSTAGRAM
+        </ion-item>
+        <ion-item menu-close ui-sref="app.locations">
           LOCATIONS
-        </ion-item>
-        <ion-item menu-close ui-sref="app.orderonline">
-          ORDER ONLINE
-        </ion-item>
-        <ion-item menu-close ui-sref="app.contact">
-          CONTACT
         </ion-item>
         <ion-item menu-close ui-sref="app.myaccount">
           MY ACCOUNT

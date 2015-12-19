@@ -1,0 +1,32 @@
+.home-view {
+
+  .logo {
+    height: 20%;
+    background-image: url(../img/logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 2em;
+  }
+
+  .legend {
+    > img {
+      width: 12%;
+      margin-left: 10px;
+      margin-right: 5px;
+      vertical-align: middle;
+    }
+
+    font-family: "bauhaus-normal";
+    font-size: 1.7em;
+    color: $energized;
+  }
+
+  .button.claim {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    color: #000;
+  }
+
+}

@@ -1,4 +1,4 @@
-angular.module('components', ['ionic'])
+angular.module('common.directives', ['ionic'])
 
   .directive('preImg', function() {
     return {
@@ -18,7 +18,7 @@ angular.module('components', ['ionic'])
           });
         };
       },
-      templateUrl: 'components/pre-img.html'
+      templateUrl: 'templates/common/pre-img.html'
     };
   })
 

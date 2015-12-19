@@ -1,0 +1,36 @@
+<ion-view class="chooseloc-view">
+
+  <ion-pane class="padding">
+
+    <div class="top">
+      <div class="wb-title">Choose a preferred Location</div>
+
+      <ui-select ng-model="selectedItem" theme="select2" class="color-positive" style="width: 100%; margin-bottom: 1em;"
+                 search-enabled="false" title="CHOOSE A CITY">
+        <ui-select-match placeholder="CHOOSE A CITY">{{$select.selected.name}}</ui-select-match>
+        <ui-select-choices repeat="item in (cities | filter: $select.search) track by item.id">
+          <span ng-bind="item.name"></span>
+        </ui-select-choices>
+      </ui-select>
+    </div>
+
+    <div class="medium">
+      <div class="card location" ng-repeat="n in [1, 2, 3, 4, 5, 6, 7] track by $index"
+        ng-click="setActive(n)" ng-class="{active: isActive(n)}">
+        <div class="item item-text-wrap">
+          <p class="title">Carter Road</p>
+          <p class="address">11, Gagangiri, Cater Road, Bandra West, Mumbai, Maharashtra-400052</p>
+          <div class="icon ion-ios-checkmark check" ng-if="isActive(n)"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom">
+      <button class="button button-block button-balanced" ui-sref="app.home">
+        Proceed
+      </button>
+    </div>
+
+  </ion-pane>
+
+</ion-view>
