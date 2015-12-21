@@ -13,6 +13,16 @@ $energized:                       #ffcc29 !default;
 $assertive:                       #ef473a !default;
 $royal:                           #224590 !default;
 $dark:                            #e15d86 !default;
+
+$button-energized-text:           #000 !default;
+$button-energized-border:         darken($energized, 15%) !default;
+$button-energized-active-bg:      darken($energized, 15%) !default;
+$button-energized-active-border:  darken($energized, 15%) !default;
+
+$button-dark-border:              darken($dark, 8%) !default;
+$button-dark-active-bg:           darken($dark, 8%) !default;
+$button-dark-active-border:       darken($dark, 8%) !default;
+
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
 
@@ -229,7 +239,6 @@ ion-header-bar .button.button-icon {
 }
 
 
-@import "views/partials";
 @import "views/login";
 @import "views/home";
 @import "views/menu";
@@ -241,3 +250,5 @@ ion-header-bar .button.button-icon {
 @import "views/cart";
 @import "views/locations";
 
+
+@import "partials/add-toppings-modal-view";

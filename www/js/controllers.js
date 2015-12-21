@@ -129,7 +129,7 @@ angular.module('wafflebay.controllers', [])
 
 
     // OrderOnlineCtrl
-  .controller('OrderOnlineCtrl', function($scope, $ionicSlideBoxDelegate) {
+  .controller('OrderOnlineCtrl', function($scope, $ionicModal, $ionicSlideBoxDelegate, $state) {
 
     //tabs
     $scope.curTabId = 0;
@@ -163,6 +163,30 @@ angular.module('wafflebay.controllers', [])
       {image: 'img/pix.jpg', title: 'Oh So Berry Good', desc: 'Strawberry yogurt + Cheesecake bites + Strawberry Glaze', price: 220},
       {image: 'img/pix.jpg', title: 'Oh So Berry Good', desc: 'Strawberry yogurt + Cheesecake bites + Strawberry Glaze', price: 220}
     ];
+
+
+    // add-toppings modal view
+    $ionicModal.fromTemplateUrl('templates/partials/add-toppings-modal.html', {
+      scope: $scope
+    }).then(function(modal) {
+      $scope.modalAddToppings = modal;
+    });
+
+    $scope.openAddToppingsModal = function() {
+      $scope.modalAddToppings.show();
+    };
+    $scope.closeAddToppingsModal = function() {
+      $scope.modalAddToppings.hide();
+    };
+
+    $scope.doAddToCart = function() {
+      $scope.closeAddToppingsModal();
+      $state.go('app.cart');
+    };
+    //Cleanup the modal when we're done with it!
+    $scope.$on('$destroy', function() {
+      $scope.modalAddToppings.remove();
+    });
 
   })
 

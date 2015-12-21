@@ -1,0 +1,82 @@
+<ion-modal-view class="add-toppings-modal-view">
+
+  <ion-content class="padding">
+
+    <div class="wb-content">
+      <button class="button button-clear icon ion-close" ng-click="closeAddToppingsModal()"></button>
+
+      <section class="summary-area">
+        <div class="title">Cranberry</div>
+        <div class="type">Mini</div>
+        <div class="total-label">TOTAL</div>
+        <div class="total-price">110</div>
+      </section>
+
+
+      <section class="select-area">
+
+        <!--Regular-->
+        <div ng-init="toggle_regular = 0">
+
+          <a class="button icon-right button-energized button-block align-left"
+             ng-click="toggle_regular = (toggle_regular ? 0 : 1);"
+             ng-class="{'ion-chevron-right': !toggle_regular, 'ion-chevron-down': toggle_regular}">Regular</a>
+
+          <section class="toppings-list" ng-if="toggle_regular">
+            <div class="row" ng-repeat="i in [1,2,3,4,5,6,7,8,9]">
+              <div class="col col-60">Chocolate Truffle</div>
+              <div class="col col-20">As 60</div>
+              <div class="col col-20">
+                <a class="button button-small button-block button-energized action-add">ADD</a>
+              </div>
+            </div>
+          </section>
+
+        </div>
+
+        <!--Premium-->
+        <div ng-init="toggle_premium = 0">
+
+          <a class="button icon-right button-energized button-block align-left"
+              ng-click="toggle_premium = (toggle_premium ? 0 : 1);"
+              ng-class="{'ion-chevron-right': !toggle_premium, 'ion-chevron-down': toggle_premium}">Premium</a>
+
+          <section class="toppings-list" ng-if="toggle_premium">
+            <div class="row" ng-repeat="i in [1,2,3,4,5,6,7,8,9]">
+              <div class="col col-60">Chocolate Truffle</div>
+              <div class="col col-20">As 60</div>
+              <div class="col col-20">
+                <a class="button button-small button-block button-energized action-add">ADD</a>
+              </div>
+            </div>
+          </section>
+
+        </div>
+
+        <!--Luxury-->
+        <div ng-init="toggle_luxury = 0">
+
+          <a class="button icon-right button-energized button-block align-left"
+             ng-click="toggle_luxury = (toggle_luxury ? 0 : 1);"
+             ng-class="{'ion-chevron-right': !toggle_luxury, 'ion-chevron-down': toggle_luxury}">Premium</a>
+
+          <section class="toppings-list" ng-if="toggle_luxury">
+            <div class="row" ng-repeat="i in [1,2,3,4,5,6,7,8,9]">
+              <div class="col col-60">Chocolate Truffle</div>
+              <div class="col col-20">As 60</div>
+              <div class="col col-20">
+                <a class="button button-small button-block button-energized action-add">ADD</a>
+              </div>
+            </div>
+          </section>
+
+        </div>
+
+      </section>
+
+      <button class="button button-dark button-block" ng-click="doAddToCart()">ADD TO CART</button>
+    </div>
+
+  </ion-content>
+
+</ion-modal-view>
