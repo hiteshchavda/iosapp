@@ -1,6 +1,6 @@
 <ion-view class="about-view">
 
-  <ion-content scroll="false">
+  <ion-content>
 
     <div class="row wb-tabs-bar">
       <div class="col" ng-class="{active: isTabActive(0)}" ng-click="selectTab(0)"><div>YOGURTBAY</div></div>
@@ -11,7 +11,9 @@
                    on-slide-changed="slideHasChanged($index)"
                    delegate-handle="aboutSlideBox"
                    active-slide="curTabId">
+
       <ion-slide class="padding">
+
         <div class="yogurtbay-logo"></div>
         <p>
           Young fresh and quirky, the smiley face that forms the core of our logo perfectly encapsulates how we want our customers to leave the store.
@@ -30,9 +32,12 @@
           Pittie has given the brand the right backing and financial thrust to open new stores in under 1 year across Mumbai, Pune, Hyderabad, Bhopal and Kochin.
           Yogurtbay is further looking to spread its footprint pan India as well as globally in the year 2015.
         </p>
+
       </ion-slide>
 
+
       <ion-slide class="padding">
+
         <p>
           Yogurtbay changed the Indian dessert market with its healthy delicious line of gourmet eggless frozen yogurt
           and smoothies at a time when everyone gorging on sugar loaded unhealhy treats. In just about 3 years people as a lifestyle choice
@@ -47,7 +52,9 @@
           first indigenous waffle brand that brings to the country the top worldwide trend. Waffles are a global hit and we bring the best ones to our patrons! Crispy, handy and delicious
           with complete flexibility in customization. Wafflebay will surely change how Indians indulge their sweet tooth!"
         </p>
+
       </ion-slide>
+
     </ion-slide-box>
 
   </ion-content>

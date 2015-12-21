@@ -114,6 +114,14 @@ angular.module('wafflebay.controllers', [])
 
 
   .controller('CartCtrl', function($scope) {
+    $scope.orders = [
+      {
+        title: 'Acai Berry',
+        type: 'yogurt',
+        toppings: 'Mango',
+        price: 205
+      }
+    ];
   })
 
 

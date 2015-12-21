@@ -1,6 +1,8 @@
 .chooseloc-view {
 
-  ion-pane {
+  .wb-content {
+    height: 100%;
+    padding: 0;
     @include display(flex);
     @include flex-direction(column);
   }

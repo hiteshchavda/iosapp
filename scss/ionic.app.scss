@@ -25,6 +25,13 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 @include font-face("bauhaus-normal", "../font/bauhaus-normal");
 @include font-face("bauhaus-bold", "../font/bauhaus-bold");
 
+.font-bauhaus {
+  font-family: "bauhaus-normal";
+}
+
+.clr-calm {color: $calm;}
+
+
 // ui-select styles
 .select2-container {
 
@@ -200,6 +207,10 @@ ion-header-bar .button.button-icon {
 
 .wb-tabs-content {
   height: calc(100% - 40px) !important;
+
+  ion-slide {
+    overflow: scroll;
+  }
 }
 
 
@@ -212,4 +223,4 @@ ion-header-bar .button.button-icon {
 @import "views/chooseloc";
 @import "views/about";
 @import "views/myaccount";
-
+@import "views/cart";
