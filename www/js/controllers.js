@@ -49,20 +49,20 @@ angular.module('wafflebay.controllers', [])
 
 
   .controller('AboutCtrl', function($scope, $ionicSlideBoxDelegate) {
-    $scope.tabid = 0;
+    $scope.curTabId = 0;
 
     $scope.selectTab = function(id) {
-      $scope.tabid = id;
+      $scope.curTabId = id;
 
       $ionicSlideBoxDelegate.$getByHandle('aboutSlideBox').slide(id);
     };
 
     $scope.isTabActive = function(id) {
-      return ($scope.tabid == id);
+      return ($scope.curTabId == id);
     };
 
     $scope.slideHasChanged = function(id) {
-      $scope.tabid = id;
+      $scope.curTabId = id;
     };
 
   })
@@ -72,20 +72,20 @@ angular.module('wafflebay.controllers', [])
 
 
   .controller('MyAccountCtrl', function($scope, $ionicSlideBoxDelegate) {
-    $scope.tabid = 0;
+    $scope.curTabId = 0;
 
     $scope.selectTab = function(id) {
-      $scope.tabid = id;
+      $scope.curTabId = id;
 
       $ionicSlideBoxDelegate.$getByHandle('myaccountSlideBox').slide(id);
     };
 
     $scope.isTabActive = function(id) {
-      return ($scope.tabid == id);
+      return ($scope.curTabId == id);
     };
 
     $scope.slideHasChanged = function(id) {
-      $scope.tabid = id;
+      $scope.curTabId = id;
     };
 
   })
@@ -113,13 +113,7 @@ angular.module('wafflebay.controllers', [])
 
 
 
-  .controller('PlaceOrderCtrl', function($scope) {
-    $scope.item = {
-      image: 'img/pix.jpg',
-      title: 'Mango Delight',
-      desc: 'Out now!',
-      text: 'Lorem lpsum dolor sit amet, conectetur adipiscing elit. Praesent non rhoncus urna, et commodo nunc. Nunc dignissim lectus lpsum, vitae fringilla elit ullamcorper a.'
-    };
+  .controller('CartCtrl', function($scope) {
   })
 
 
@@ -127,11 +121,41 @@ angular.module('wafflebay.controllers', [])
 
 
     // OrderOnlineCtrl
-  .controller('OrderOnlineCtrl', function($scope, $ionicModal) {
-    $scope.orders = [
-      {image: 'img/pix.jpg', title: 'Mango Delight', small: 160, large: 160},
-      {image: 'img/pix.jpg', title: 'Mango Delight', small: 160, large: 160}
+  .controller('OrderOnlineCtrl', function($scope, $ionicSlideBoxDelegate) {
+
+    //tabs
+    $scope.curTabId = 2;
+
+    $scope.selectTab = function(id) {
+      $scope.curTabId = id;
+
+      $ionicSlideBoxDelegate.$getByHandle('orderonlineSlideBox').slide(id);
+    };
+
+    $scope.isTabActive = function(id) {
+      return ($scope.curTabId == id);
+    };
+
+    $scope.slideHasChanged = function(id) {
+      $scope.curTabId = id;
+    };
+
+    // data
+    $scope.yogurts = [
+      {image: 'img/pix.jpg', title: 'Blueberry Cheesecake', mini: 130, small: 160, large: 360},
+      {image: 'img/pix.jpg', title: 'Blueberry Cheesecake', mini: 130, small: 160, large: 360}
     ];
+
+    $scope.waffles = [
+      {image: 'img/pix.jpg', title: 'Belgian Chocolate', one: 125, two: 225, three: 300},
+      {image: 'img/pix.jpg', title: 'Belgian Chocolate', one: 125, two: 225, three: 300}
+    ];
+
+    $scope.combos = [
+      {image: 'img/pix.jpg', title: 'Oh So Berry Good', desc: 'Strawberry yogurt + Cheesecake bites + Strawberry Glaze', price: 220},
+      {image: 'img/pix.jpg', title: 'Oh So Berry Good', desc: 'Strawberry yogurt + Cheesecake bites + Strawberry Glaze', price: 220}
+    ];
+
   })
 
 
@@ -140,9 +164,6 @@ angular.module('wafflebay.controllers', [])
 
   .controller('SettingsCtrl', function($scope) {
 
-    $scope.st1 = true;
-    $scope.st2 = false;
-    $scope.st3 = true;
   })
 
 

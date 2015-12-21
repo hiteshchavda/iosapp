@@ -1,33 +1,9 @@
 .about-view {
 
-  .wb-tabs {
-    background-color: $positive;
-    padding-bottom: 0;
-    color: $energized;
-    font-weight: bold;
-
-    .col {
-      text-align: center;
-      border-bottom-width: 5px;
-
-      &.active {
-        border-bottom: 5px solid $calm;
-      }
-
-      &:not(:first-child) > div {
-        border-left: 1px solid grey;
-      }
-    }
-  }
-
-  .wb-content {
-    height: calc(100% - 40px) !important;
-
-    p {
-      font-family: "bauhaus-normal";
-      font-size: large;
-      margin-bottom: 20px;
-    }
+  .wb-tabs-content p {
+    font-family: "bauhaus-normal";
+    font-size: large;
+    margin-bottom: 20px;
   }
 
   .yogurtbay-logo {

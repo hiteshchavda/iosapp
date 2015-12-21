@@ -6,8 +6,6 @@ angular.module('wafflebay', [
   'lodash',
   'ionic',
   'ui.select',
-  'toggle-switch',
-  'tabSlideBox',
   'common.directives',
   'wafflebay.controllers'
 ])
@@ -145,17 +143,12 @@ angular.module('wafflebay', [
       }
     })
 
-
-
-
-
-
-    .state('app.placeorder', {
-      url: '/placeorder',
+    .state('app.cart', {
+      url: '/cart',
       views: {
         'content': {
-          templateUrl: 'templates/placeorder.html',
-          controller: 'PlaceOrderCtrl'
+          templateUrl: 'templates/cart.html',
+          controller: 'CartCtrl'
         }
       }
     })

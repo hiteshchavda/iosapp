@@ -1,7 +1,20 @@
 .orderonline-view {
 
-  .row.prices .col {
+  .row.prices {
+    font-family: "bauhaus-normal";
+  }
+
+  .prices-yogurt {
     line-height: 35px;
+  }
+  .prices-waffles .col {
+    line-height: 25px;
+    padding: 5px;
+  }
+
+  .button.button-energized {
+    color: #000;
+    font-family: "bauhaus-normal";
   }
 
 }

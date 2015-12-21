@@ -9864,6 +9864,8 @@ ion-side-menu .item-content {
 
 .item-divider {
   min-height: 0;
+  padding-top: 3px;
+  padding-bottom: 3px;
   background-color: #ffcc29;
   border-color: #ffcc29; }
 
@@ -9894,6 +9896,34 @@ ion-header-bar .button.button-icon.cart-button {
 
 .noborder {
   border: 0; }
+
+.height-20 {
+  height: 20px; }
+
+.align-left {
+  text-align: left; }
+
+.align-center {
+  text-align: center; }
+
+.align-right {
+  text-align: right; }
+
+.wb-tabs-bar {
+  background-color: #2e2e76;
+  padding-bottom: 0;
+  color: #ffcc29;
+  font-weight: bold; }
+  .wb-tabs-bar .col {
+    text-align: center;
+    border-bottom-width: 5px; }
+    .wb-tabs-bar .col.active {
+      border-bottom: 5px solid #11c1f3; }
+    .wb-tabs-bar .col:not(:first-child) > div {
+      border-left: 1px solid grey; }
+
+.wb-tabs-content {
+  height: calc(100% - 40px) !important; }
 
 .login-view .top {
   height: 40%;
@@ -9955,8 +9985,19 @@ ion-header-bar .button.button-icon.cart-button {
   float: right;
   color: #ffcc29; }
 
-.orderonline-view .row.prices .col {
+.orderonline-view .row.prices {
+  font-family: "bauhaus-normal"; }
+
+.orderonline-view .prices-yogurt {
   line-height: 35px; }
+
+.orderonline-view .prices-waffles .col {
+  line-height: 25px;
+  padding: 5px; }
+
+.orderonline-view .button.button-energized {
+  color: #000;
+  font-family: "bauhaus-normal"; }
 
 .settings-view section {
   margin-bottom: 20px; }
@@ -9964,28 +10005,6 @@ ion-header-bar .button.button-icon.cart-button {
 .settings-view .label {
   margin-left: 15px;
   margin-bottom: 10px; }
-
-.placeorder-view .prices {
-  font-size: 14px; }
-
-.placeorder-view .share .col .icon {
-  width: 35px;
-  line-height: 35px;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  text-align: center;
-  display: inline-block;
-  background-color: #ffcc29;
-  color: #2e2e76;
-  margin-right: 5px; }
-
-.placeorder-view .share .col span {
-  text-align: center;
-  display: inline-block;
-  width: 30px;
-  background-color: #fff;
-  color: #000;
-  font-size: 0.8em; }
 
 .chooseloc-view ion-pane {
   display: -webkit-box;
@@ -10037,25 +10056,10 @@ ion-header-bar .button.button-icon.cart-button {
     right: 1em;
     top: 1em; }
 
-.about-view .wb-tabs {
-  background-color: #2e2e76;
-  padding-bottom: 0;
-  color: #ffcc29;
-  font-weight: bold; }
-  .about-view .wb-tabs .col {
-    text-align: center;
-    border-bottom-width: 5px; }
-    .about-view .wb-tabs .col.active {
-      border-bottom: 5px solid #11c1f3; }
-    .about-view .wb-tabs .col:not(:first-child) > div {
-      border-left: 1px solid grey; }
-
-.about-view .wb-content {
-  height: calc(100% - 40px) !important; }
-  .about-view .wb-content p {
-    font-family: "bauhaus-normal";
-    font-size: large;
-    margin-bottom: 20px; }
+.about-view .wb-tabs-content p {
+  font-family: "bauhaus-normal";
+  font-size: large;
+  margin-bottom: 20px; }
 
 .about-view .yogurtbay-logo {
   height: 25%;
@@ -10065,22 +10069,6 @@ ion-header-bar .button.button-icon.cart-button {
   background-position: center;
   margin-top: 1em;
   margin-bottom: 2em; }
-
-.myaccount-view .wb-tabs {
-  background-color: #2e2e76;
-  padding-bottom: 0;
-  color: #ffcc29;
-  font-weight: bold; }
-  .myaccount-view .wb-tabs .col {
-    text-align: center;
-    border-bottom-width: 5px; }
-    .myaccount-view .wb-tabs .col.active {
-      border-bottom: 5px solid #11c1f3; }
-    .myaccount-view .wb-tabs .col:not(:first-child) > div {
-      border-left: 1px solid grey; }
-
-.myaccount-view .wb-content {
-  height: calc(100% - 40px) !important; }
 
 .myaccount-view .wb-card {
   background-color: #2e2e76;

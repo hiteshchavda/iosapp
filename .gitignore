@@ -5,6 +5,7 @@
 .DS_Store
 wafflebay.xcscheme
 
+www/css/ionic.app.css
 
 bower_components/
 node_modules/
