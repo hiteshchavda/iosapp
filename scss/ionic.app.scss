@@ -191,9 +191,9 @@ ion-header-bar .button.button-icon {
   color: $energized;
   font-weight: bold;
 
-  .col {
-    text-align: center;
+  .wb-tab {
     border-bottom-width: 5px;
+    text-align: center;
 
     &.active {
       border-bottom: 5px solid $calm;
@@ -203,13 +203,28 @@ ion-header-bar .button.button-icon {
       border-left: 1px solid grey;
     }
   }
+
+  // has many tabs
+  &.has-many {
+    padding-top: 5px;
+    overflow-x: scroll;
+
+    .wb-tab {
+      float: left;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      width: 115px;
+      text-align: center;
+    }
+  }
 }
+
 
 .wb-tabs-content {
   height: calc(100% - 40px) !important;
 
   ion-slide {
-    overflow: scroll;
+    overflow-y: scroll;
   }
 }
 
@@ -224,3 +239,5 @@ ion-header-bar .button.button-icon {
 @import "views/about";
 @import "views/myaccount";
 @import "views/cart";
+@import "views/locations";
+

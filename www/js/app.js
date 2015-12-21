@@ -118,7 +118,8 @@ angular.module('wafflebay', [
       url: '/locations',
       views: {
         'content': {
-          templateUrl: 'templates/locations.html'
+          templateUrl: 'templates/locations.html',
+          controller: 'LocationsCtrl'
         }
       }
     })

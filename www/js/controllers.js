@@ -175,4 +175,32 @@ angular.module('wafflebay.controllers', [])
   })
 
 
+  .controller('LocationsCtrl', function($scope) {
+    $scope.locations = [
+      'MUMBAI',
+      'DELHI',
+      'HYDERA',
+      'FOURTH',
+      'FIFTH'
+    ];
+
+    //tabs
+    $scope.curTabId = 0;
+
+    $scope.selectTab = function(id) {
+      $scope.curTabId = id;
+
+      $ionicSlideBoxDelegate.$getByHandle('locationsSlideBox').slide(id);
+    };
+
+    $scope.isTabActive = function(id) {
+      return ($scope.curTabId == id);
+    };
+
+    $scope.slideHasChanged = function(id) {
+      $scope.curTabId = id;
+    };
+
+  });
+
 ;

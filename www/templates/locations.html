@@ -1,6 +1,38 @@
-<ion-view>
+<ion-view class="locations-view">
   <ion-content>
 
+    <div class="wb-tabs-bar has-many">
+      <div style="width: {{locations.length * 130}}px;">
+        <div class="wb-tab" ng-repeat="loc in locations track by $index"
+             ng-class="{active: isTabActive($index)}" ng-click="selectTab($index)">
+          <div>{{loc}}</div>
+        </div>
+      </div>
+    </div>
+
+    <ion-slide-box show-pager="false" class="wb-tabs-content"
+                   on-slide-changed="slideHasChanged($index)"
+                   delegate-handle="locationsSlideBox"
+                   active-slide="curTabId">
+
+      <ion-slide class="padding" ng-repeat="loc in locations track by $index">
+
+        <div class="card padding location-card" ng-repeat="n in [1,2,3,4,5,6,7] track by $index">
+          <p class="card-title">Carter Road</p>
+          <div class="row">
+            <div class="col col-67">
+              11, Gagangiri, Cater Road, Bandra West, Mumbai, Maharashtra-400052
+            </div>
+            <div class="col col-center align-center card-actions">
+              <i class="icon ion-ios-telephone action-call"></i>
+              <i class="icon ion-ios-location action-loc"></i>
+            </div>
+          </div>
+        </div>
+
+      </ion-slide>
+
+    </ion-slide-box>
 
   </ion-content>
 </ion-view>

@@ -1,0 +1,32 @@
+.locations-view {
+
+  .location-card {
+    color: #000;
+    font-family: "bauhaus-normal";
+  }
+
+  .card-title {
+    color: $energized;
+    font-size: large;
+    margin-bottom: 0;
+  }
+
+  .card-actions > .icon {
+    color: $energized;
+
+    &:active {
+      opacity: 0.7;
+    }
+
+    &.action-call {
+      font-size: 45px;
+    }
+
+    &.action-loc {
+      position: relative;
+      top: -5px;
+      left: 10px;
+      font-size: 35px;
+    }
+  }
+}

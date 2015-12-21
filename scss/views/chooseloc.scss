@@ -9,7 +9,7 @@
 
   .medium {
     @include flex(1);
-    overflow: scroll;
+    overflow-y: scroll;
   }
 
   .wb-title {
