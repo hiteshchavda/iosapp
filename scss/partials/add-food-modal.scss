@@ -1,0 +1,36 @@
+.add-food-modal-view {
+
+  .wb-content{
+    background-color: $royal;
+    height: auto;
+    padding-bottom: 5px;
+
+    font-family: "bauhaus-normal";
+  }
+
+  .food-title {
+    font-family: "bauhaus-normal";
+    margin-top: 10px;
+    font-size: 1.4em;
+    color: $energized;
+  }
+
+  .food-desc {
+
+  }
+
+  .food-prices {
+
+    .col {
+      line-height: 25px;
+      padding: 5px;
+    }
+  }
+
+
+  .button.button-energized {
+    color: #000;
+    font-family: "bauhaus-normal";
+  }
+}
+

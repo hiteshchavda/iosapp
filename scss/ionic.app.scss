@@ -239,6 +239,29 @@ ion-header-bar .button.button-icon {
 }
 
 
+// modal
+ion-modal-view {
+  background: transparent;
+
+  ion-content {
+    background: rgba(34, 69, 144, 0.8);
+  }
+
+  .wb-content {
+    position: relative;
+    background-color: #fff;
+    height: 100%;
+    color: #000;
+    padding: 10px 10px 0 10px;
+  }
+
+  .button.ion-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
 @import "views/login";
 @import "views/home";
 @import "views/menu";
@@ -251,4 +274,5 @@ ion-header-bar .button.button-icon {
 @import "views/locations";
 
 
-@import "partials/add-toppings-modal-view";
+@import "partials/add-toppings-modal";
+@import "partials/add-food-modal";

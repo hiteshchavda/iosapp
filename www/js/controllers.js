@@ -93,7 +93,7 @@ angular.module('wafflebay.controllers', [])
 
 
 
-  .controller('HomeCtrl', function($scope) {
+  .controller('HomeCtrl', function($scope, $ionicModal, $state) {
     $scope.bestsellers = [
       { image: 'img/pix.jpg', title: 'Mango Delight - 1', desc: 'Out now!' },
       { image: 'img/pix.jpg', title: 'Mango Delight - 2', desc: 'Out now!' },
@@ -107,6 +107,58 @@ angular.module('wafflebay.controllers', [])
       { image: 'img/pix.jpg', title: '40% OFF ON DIWALI', desc: 'Out now!' },
       { image: 'img/pix.jpg', title: '50% OFF ON DIWALI', desc: 'Out now!' }
     ];
+
+    $scope.food = {
+      image: 'img/pix.jpg', title: 'Belgian Chocolate', mini: 125, small: 225, large: 300,
+      desc: 'Go Healthy with this super fruit from Brazil wichi leaves a tangy taste in your mouth!'
+    };
+
+
+    // modal add-food
+    $ionicModal.fromTemplateUrl('templates/partials/add-food-modal.html', {
+      scope: $scope,
+    }).then(function(modal) {
+      $scope.modalAddFood = modal;
+    });
+    $scope.openAddFoodModal = function() {
+      $scope.modalAddFood.show();
+    };
+    $scope.closeAddFoodModal = function() {
+      $scope.modalAddFood.hide();
+    };
+
+
+    // modal add-toppings
+    // add-toppings modal view
+    $ionicModal.fromTemplateUrl('templates/partials/add-toppings-modal.html', {
+      scope: $scope
+    }).then(function(modal) {
+      $scope.modalAddToppings = modal;
+    });
+
+    $scope.openAddToppingsModal = function() {
+      $scope.modalAddToppings.show();
+    };
+    $scope.closeAddToppingsModal = function() {
+      $scope.modalAddToppings.hide();
+    };
+    $scope.doAddToCart = function() {
+      $scope.closeAddToppingsModal();
+      $state.go('app.cart');
+    };
+
+
+    //Cleanup the modal when we're done with it!
+    $scope.$on('$destroy', function() {
+      $scope.modalAddFood.remove();
+      $scope.modalAddToppings.remove();
+    });
+
+    $scope.doAddToppings = function() {
+      $scope.closeAddFoodModal();
+      $scope.openAddToppingsModal();
+    };
+
   })
 
 

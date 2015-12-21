@@ -1,26 +1,8 @@
 .add-toppings-modal-view {
 
-  background: transparent;
-
-  ion-content {
-    background: rgba(34, 69, 144, 0.8);
-  }
-
   .wb-content {
-    position: relative;
-    background-color: #fff;
-    height: 100%;
-    color: #000;
-    padding: 10px 10px 0 10px;
-
     @include display(flex);
     @include flex-direction(column);
-  }
-
-  .button.ion-close {
-    position: absolute;
-    top: 0;
-    right: 0;
   }
 
   .summary-area {

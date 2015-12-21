@@ -1,0 +1,49 @@
+<ion-modal-view class="add-food-modal-view">
+
+  <ion-content class="padding">
+
+    <div class="wb-content">
+      <button class="button button-clear icon ion-close" ng-click="closeAddFoodModal()"></button>
+
+      <div class="food-title">{{food.title}}</div>
+
+      <div class="list card">
+        <pre-img ratio="_3_2" helper-class="item item-image">
+          <img ng-src="{{food.image}}" spinner-on-load>
+        </pre-img>
+
+        <div class="item item-text-wrap" style="padding-bottom: 0;">
+
+          <div>{{food.desc}}</div>
+
+          <div class="row food-prices">
+            <div class="col align-center">
+              <div>MINI</div>
+              <div>As {{food.mini}}</div>
+              <button class="button button-small button-block button-energized"
+                      ui-sref="app.cart">ADD</button>
+            </div>
+            <div class="col align-center">
+              <div>SMALL</div>
+              <div>As {{food.small}}</div>
+              <button class="button button-small button-block button-energized"
+                      ui-sref="app.cart">ADD</button>
+            </div>
+            <div class="col align-center">
+              <div>LARGE</div>
+              <div>As {{food.large}}</div>
+              <button class="button button-small button-block button-energized"
+                      ui-sref="app.cart">ADD</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <button class="button button-calm button-block" ng-click="doAddToppings()">ADD TOPPINGS</button>
+
+    </div>
+
+  </ion-content>
+
+</ion-modal-view>
