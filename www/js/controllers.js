@@ -124,7 +124,7 @@ angular.module('wafflebay.controllers', [])
   .controller('OrderOnlineCtrl', function($scope, $ionicSlideBoxDelegate) {
 
     //tabs
-    $scope.curTabId = 2;
+    $scope.curTabId = 0;
 
     $scope.selectTab = function(id) {
       $scope.curTabId = id;

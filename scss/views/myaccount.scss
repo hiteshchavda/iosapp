@@ -1,5 +1,9 @@
 .myaccount-view {
 
+  ion-slide {
+    overflow: scroll;
+  }
+
   .wb-card {
     background-color: $positive;
     border-radius: 1em;

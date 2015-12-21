@@ -14,113 +14,107 @@
                    active-slide="curTabId">
 
       <!--YOGURT tab-->
-      <ion-slide>
-        <ion-scroll style="height: 100%;" class="padding">
+      <ion-slide class="padding">
 
-          <div class="card" ng-repeat="item in yogurts track by $index">
-            <pre-img ratio="_3_2" helper-class="item item-image">
-              <img ng-src="{{item.image}}" spinner-on-load>
-            </pre-img>
+        <div class="card" ng-repeat="item in yogurts track by $index">
+          <pre-img ratio="_3_2" helper-class="item item-image">
+            <img ng-src="{{item.image}}" spinner-on-load>
+          </pre-img>
 
-            <div class="item item-divider"></div>
+          <div class="item item-divider"></div>
 
-            <div class="item" style="padding-bottom: 0;">
-              <strong>{{item.title}}</strong>
+          <div class="item" style="padding-bottom: 0;">
+            <strong>{{item.title}}</strong>
 
-              <div class="row prices prices-yogurt">
-                <div class="col align-center">Mini</div>
-                <div class="col align-center">As {{item.large}}</div>
-                <div class="col align-right">
-                  <button class="button button-small icon ion-plus-round button-energized"></button>
-                </div>
+            <div class="row prices prices-yogurt">
+              <div class="col align-center">Mini</div>
+              <div class="col align-center">As {{item.large}}</div>
+              <div class="col align-right">
+                <button class="button button-small icon ion-plus-round button-energized"></button>
               </div>
+            </div>
 
-              <div class="row prices">
-                <div class="col align-center">Small</div>
-                <div class="col align-center">As {{item.small}}</div>
-                <div class="col align-right">
-                  <button class="button button-small icon ion-plus-round button-energized"></button>
-                </div>
+            <div class="row prices">
+              <div class="col align-center">Small</div>
+              <div class="col align-center">As {{item.small}}</div>
+              <div class="col align-right">
+                <button class="button button-small icon ion-plus-round button-energized"></button>
               </div>
+            </div>
 
-              <div class="row prices">
-                <div class="col align-center">Large</div>
-                <div class="col align-center">As {{item.large}}</div>
-                <div class="col align-right">
-                  <button class="button button-small icon ion-plus-round button-energized"></button>
-                </div>
+            <div class="row prices">
+              <div class="col align-center">Large</div>
+              <div class="col align-center">As {{item.large}}</div>
+              <div class="col align-right">
+                <button class="button button-small icon ion-plus-round button-energized"></button>
               </div>
             </div>
           </div>
+        </div>
 
-          <div class="height-20"></div>
+        <div class="height-20"></div>
 
-        </ion-scroll>
       </ion-slide>
 
 
       <!--WAFFLES tab-->
-      <ion-slide>
-        <ion-scroll style="height: 100%;" class="padding">
+      <ion-slide  class="padding">
 
-          <div class="list card" ng-repeat="item in waffles track by $index">
-            <pre-img ratio="_3_2" helper-class="item item-image">
-              <img ng-src="{{item.image}}" spinner-on-load>
-            </pre-img>
+        <div class="list card" ng-repeat="item in waffles track by $index">
+          <pre-img ratio="_3_2" helper-class="item item-image">
+            <img ng-src="{{item.image}}" spinner-on-load>
+          </pre-img>
 
-            <div class="item item-divider"></div>
+          <div class="item item-divider"></div>
 
-            <div class="item" style="padding-bottom: 0;">
-              <strong>{{item.title}}</strong>
+          <div class="item" style="padding-bottom: 0;">
+            <strong>{{item.title}}</strong>
 
-              <div class="row prices prices-waffles">
-                <div class="col align-center">
-                  <div>ONE</div>
-                  <div>As {{item.one}}</div>
-                  <button class="button button-small button-block button-energized">ADD</button>
-                </div>
-                <div class="col align-center">
-                  <div>TWO</div>
-                  <div>As {{item.two}}</div>
-                  <button class="button button-small button-block button-energized">ADD</button>
-                </div>
-                <div class="col align-center">
-                  <div>THREE</div>
-                  <div>As {{item.three}}</div>
-                  <button class="button button-small button-block button-energized">ADD</button>
-                </div>
+            <div class="row prices prices-waffles">
+              <div class="col align-center">
+                <div>ONE</div>
+                <div>As {{item.one}}</div>
+                <button class="button button-small button-block button-energized">ADD</button>
+              </div>
+              <div class="col align-center">
+                <div>TWO</div>
+                <div>As {{item.two}}</div>
+                <button class="button button-small button-block button-energized">ADD</button>
+              </div>
+              <div class="col align-center">
+                <div>THREE</div>
+                <div>As {{item.three}}</div>
+                <button class="button button-small button-block button-energized">ADD</button>
               </div>
             </div>
-
           </div>
 
-          <div class="height-20"></div>
+        </div>
 
-        </ion-scroll>
+        <div class="height-20"></div>
+
       </ion-slide>
 
       <!--COMBOS tab-->
-      <ion-slide>
-        <ion-scroll style="height: 100%;" class="padding">
+      <ion-slide  class="padding">
 
-          <div class="list card" ng-repeat="item in combos track by $index">
-            <pre-img ratio="_3_2" helper-class="item item-image">
-              <img ng-src="{{item.image}}" spinner-on-load>
-            </pre-img>
+        <div class="list card" ng-repeat="item in combos track by $index">
+          <pre-img ratio="_3_2" helper-class="item item-image">
+            <img ng-src="{{item.image}}" spinner-on-load>
+          </pre-img>
 
-            <div class="item item-divider"></div>
+          <div class="item item-divider"></div>
 
-            <div class="item item-text-wrap" style="padding-bottom:0;">
-              <strong>{{item.title}}</strong>
-              <p style="margin: 15px 0;">{{item.desc}}</p>
+          <div class="item item-text-wrap" style="padding-bottom:0;">
+            <strong>{{item.title}}</strong>
+            <p style="margin: 15px 0;">{{item.desc}}</p>
 
-              <button class="button button-small button-block button-calm">ADD TO CART</button>
-            </div>
+            <button class="button button-small button-block button-calm">ADD TO CART</button>
           </div>
+        </div>
 
-          <div class="height-20"></div>
+        <div class="height-20"></div>
 
-        </ion-scroll>
       </ion-slide>
 
     </ion-slide-box>

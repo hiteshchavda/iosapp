@@ -1,6 +1,6 @@
 <ion-view class="myaccount-view">
 
-  <ion-content scroll="false" padding="false">
+  <ion-content scroll="false">
 
     <div class="row wb-tabs-bar">
       <div class="col" ng-class="{active: isTabActive(0)}" ng-click="selectTab(0)"><div>ORDERS</div></div>
@@ -11,44 +11,40 @@
                    on-slide-changed="slideHasChanged($index)"
                    delegate-handle="myaccountSlideBox"
                    active-slide="curTabId">
-      <ion-slide>
-        <ion-scroll style="height: 100%;" class="padding">
 
-          <div class="order wb-card" ng-repeat="n in [1, 2, 3, 4, 5, 6, 7] track by $index">
-            <span class="label">OrderId:</span> <span class="numeric">0242929374</span><br/>
-            <span class="label">Payment mode:</span> <span class="string">COD</span><br/>
-            <span class="label">No Of Items:</span> <span class="numeric">1</span>
-            <div class="date">16 Dec 2015 1:15 PM</div>
-            <div class="total">
-              <span class="label">Total:</span> <span class="string">Rs</span> <span class="numeric">165</span>
-            </div>
+      <ion-slide class="padding">
+
+        <div class="order wb-card" ng-repeat="n in [1, 2, 3, 4, 5, 6, 7] track by $index">
+          <span class="label">OrderId:</span> <span class="numeric">0242929374</span><br/>
+          <span class="label">Payment mode:</span> <span class="string">COD</span><br/>
+          <span class="label">No Of Items:</span> <span class="numeric">1</span>
+          <div class="date">16 Dec 2015 1:15 PM</div>
+          <div class="total">
+            <span class="label">Total:</span> <span class="string">Rs</span> <span class="numeric">165</span>
           </div>
+        </div>
 
-          <div style="height: 10px;"></div>
-
-        </ion-scroll>
+        <div style="height: 10px;"></div>
       </ion-slide>
 
       <!--Notifications-->
-      <ion-slide>
-        <ion-scroll style="height: 100%;" class="padding">
+      <ion-slide class="padding">
 
-          <div class="notification" ng-repeat="n in [1, 2, 3, 4, 5, 6, 7] track by $index">
-            <div class="issued-datetime">
-              <div class="date">15 Dec 2015</div>
-              <div class="time">11:23 PM</div>
-            </div>
-            <div class="wb-card">
-              New flavours are available at the Bandra outlet.
-              <br/>
-              #yogurtbay
-            </div>
+        <div class="notification" ng-repeat="n in [1, 2, 3, 4, 5, 6, 7] track by $index">
+          <div class="issued-datetime">
+            <div class="date">15 Dec 2015</div>
+            <div class="time">11:23 PM</div>
           </div>
+          <div class="wb-card">
+            New flavours are available at the Bandra outlet.
+            <br/>
+            #yogurtbay
+          </div>
+        </div>
 
-          <div style="height: 10px;"></div>
-
-        </ion-scroll>
+        <div style="height: 10px;"></div>
       </ion-slide>
+
     </ion-slide-box>
 
   </ion-content>
