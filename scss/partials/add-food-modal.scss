@@ -1,19 +1,19 @@
 .add-food-modal-view {
 
-  .wb-content{
-    background-color: $royal;
+  .wb-modal-content{
+    background: $royal;
     height: auto;
     padding-bottom: 5px;
 
     top: 50%;
-    transform: translateY(-50%);
+    @include transform(translateY(-50%));
 
     font-family: "bauhaus-normal";
   }
 
   .food-title {
     font-family: "bauhaus-normal";
-    margin-top: 10px;
+    padding: 10px 0;
     font-size: 1.4em;
     color: $energized;
   }

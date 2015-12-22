@@ -27,12 +27,16 @@
       position: absolute;
       top: 1em;
       right: 15px;
+      width: 50%;
+      text-align: right;
     }
 
     .total {
       position: absolute;
       right: 1em;
       bottom: calc(5px + 1em);
+      width: 50%;
+      text-align: right;
     }
   }
 
@@ -40,15 +44,12 @@
     margin-bottom: 1.5em;
 
     .issued-datetime {
-      height: 1.7em;
       padding-left: 15px;
       padding-right: 10px;
 
       .date {
-        float: left;
       }
       .time {
-        float: right;
         color: $energized;
       }
     }

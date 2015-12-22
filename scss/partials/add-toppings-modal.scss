@@ -1,6 +1,6 @@
 .add-toppings-modal-view {
 
-  .wb-content {
+  .wb-modal-content {
     @include display(flex);
     @include flex-direction(column);
   }
@@ -21,7 +21,9 @@
       float: left;
     }
     .total-price {
+      width: 30%;
       float: right;
+      text-align: right;
     }
   }
 
@@ -29,6 +31,7 @@
     padding: 10px 0;
     @include flex(1);
     overflow-y: scroll;
+    overflow-x: hidden;
   }
 
   .toppings-list {

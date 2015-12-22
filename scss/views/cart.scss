@@ -19,18 +19,9 @@
     border-top: 1px solid $energized;
   }
 
-  // total
   .total {
-    line-height: 40px;
     font-size: large;
-    padding: 0 15px;
-  }
-  .total-count {
-    float: left;
-  }
-  .total-sum {
-    float: right;
-    color: $calm;
+    padding: 5px 15px;
   }
 
   .note {
