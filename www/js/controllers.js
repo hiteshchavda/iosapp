@@ -128,14 +128,6 @@ angular.module('wafflebay.controllers', [])
     };
 
 
-    // modal add-toppings
-    // add-toppings modal view
-    $ionicModal.fromTemplateUrl('templates/partials/add-toppings-modal.html', {
-      scope: $scope
-    }).then(function(modal) {
-      $scope.modalAddToppings = modal;
-    });
-
     $scope.openAddToppingsModal = function() {
       $scope.modalAddToppings.show();
     };
@@ -156,7 +148,17 @@ angular.module('wafflebay.controllers', [])
 
     $scope.doAddToppings = function() {
       $scope.closeAddFoodModal();
-      $scope.openAddToppingsModal();
+
+
+
+      // modal add-toppings
+      // add-toppings modal view
+      $ionicModal.fromTemplateUrl('templates/partials/add-toppings-modal.html', {
+        scope: $scope
+      }).then(function(modal) {
+        $scope.modalAddToppings = modal;
+        $scope.modalAddToppings.show();
+      });
     };
 
   })

@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.hyderabad.wafflebay" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Wafflebay</name>
+<widget id="com.redmattertech.wafflebay" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>YogurtBay</name>
     <description>
-        Wafflebay
+        YogurtBay
     </description>
-    <author email="maximech86@gmail.com" href="http://example.com.com/">
-      Maxime Chalendar
+    <author email="bhagat@redmattertech.com" href="http://example.com.com/">
+      Bhagat Marla
     </author>
     <content src="index.html" />
     <access origin="*" />
